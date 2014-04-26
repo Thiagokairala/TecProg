@@ -20,9 +20,11 @@ the Free Software Foundation, either version 3 of the License, or
 -->
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    pageEncoding="ISO-8859-1"
+    import="br.com.MDSGPP.ChamadaParlamentar.util.Language;"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -31,10 +33,12 @@ the Free Software Foundation, either version 3 of the License, or
 		<link rel="shortcut icon" href="favicon.ico" >
 	</head>
 	<body>
-		<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En"/>
+		<%if(Language.getLanguage().equals("english")) { %>
+			<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En"/>
+		<%} %>
 		
 		<div id = "topo">				
-		
+
 		</div><!-- fim da div topo -->
 				
 		<div id = "language">

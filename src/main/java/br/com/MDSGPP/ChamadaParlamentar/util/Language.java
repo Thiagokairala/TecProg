@@ -4,12 +4,16 @@ public class Language {
 
 	private static String language = "english";
 
-	public static String getLANGUAGE() {
+	public static String getLanguage() {
 		return language;
 	}
 
-	public static void setLANGUAGE(String lANGUAGE) {
-		language = lANGUAGE;
+	public static void setLanguage(String language) {
+		Language.language = language;
 	}
+
+	
+
+	
 
 }
