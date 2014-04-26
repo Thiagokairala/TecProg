@@ -41,6 +41,12 @@ public class Internalization_En extends ListResourceBundle {
 			{ "TrackSession.InsertDay", "Enter the day" },
 			{ "TrackSession.Page", "Page" }, { "TrackSession.Date", "Date" },
 
+			{ "DateNotFound.DateNotFound", "Date not found" },
+			{ "DateNotFound.TryAgain", "Want to try again?" },
+
+			{ "DeputyNotFound.DeputyNotFound", "Deputy Not Found!" },
+			{ "DeputyNotFound.TryAgain", "Want to try again?" },
+
 	};
 
 }
