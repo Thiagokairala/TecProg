@@ -62,6 +62,27 @@ public class Internalization_En extends ListResourceBundle {
 			
 			{ "ShowDay.Session", "Session:" },
 			{ "ShowDay.Sessions", "Sessions:"},
+			
+			{ "ShowEstatistic.Name", "Name:"},
+			{ "ShowEstatistic.SessionsWhatched", "Sessions Whatched:"},
+			{ "ShowEstatistic.TotalNumberSessions", "Number of sessions:"},
+			{ "ShowEstatistic.Percent", "Percent:"},
+			{ "ShowEstatistic.Sessions", "Sessions:"},
+			{ "ShowEstatistic.ask", "Want to compare it with other Deputy?"},
+			
+			{ "ShowParty.PresenceAvarege", "Presence avarege:" },
+
+			{ "PartyNotFound.warning", "Party not found!" },
+			{ "PartyNotFound.tryAgain", "Want to try again?" },
+			
+			{ "HowWeAre.HowWeAre", "How we are:" },
+			{ "HowWeAre.WeAre", "We are students of Software Engineering at the University of Brasilia" },
+			{ "HowWeAre.", "How we are." },
+			{ "HowWeAre.Members", "Members:" },
+			{ "HowWeAre.HowWeAre", "How we are:" },
+			{ "HowWeAre.MDS", "Methods Software Development:"},
+			{ "HowWeAre.GPP", "Project and Portfolio Management Software:"},
+			
 	};
 
 }
