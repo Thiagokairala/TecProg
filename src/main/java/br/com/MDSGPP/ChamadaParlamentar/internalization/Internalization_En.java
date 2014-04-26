@@ -45,6 +45,8 @@ public class Internalization_En extends ListResourceBundle {
 
 			{ "DeputyNotFound.DeputyNotFound", "Deputy Not Found!" },
 			{ "DeputyNotFound.TryAgain", "Want to try again?" },
+			
+			{ "Error.CorrectedError", "Sorry, this error will be corrected." }
 
 	};
 
