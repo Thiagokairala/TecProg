@@ -50,7 +50,7 @@ the Free Software Foundation, either version 3 of the License, or
 			
 			<h1> ${sessao.descricao }</h1>
 			
-			<h2>${quantosDeputados} Deputados Presentes:</h2>
+			<h2>${quantosDeputados} <fmt:message key="DeputyPresents.Title"></fmt:message></h2>
 			
 			<div id="arrumar">
 				<c:forEach var="deputado" items="${sessao.deputadosPresentes }">

@@ -54,7 +54,7 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- fim da id titulo -->
 				
 			<div id = "principal">
-				<h2>Ranking dos Deputados: </h2>
+				<h2><fmt:message key="CompleteRanking.DeputyRanking"></fmt:message> </h2>
 				
 				<c:forEach var = "ranking" items = "${ranking.lista }">
 					<p>${ranking.nome }: ${ranking.porcentagem }</p>
@@ -62,7 +62,7 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- fim da id principal -->
 			
 			<div id = "auxiliar">
-				<h1>Deputados com dados não disponíveis:</h1>
+				<h1><fmt:message key="CompleteRanking.DeputyNoData"></fmt:message></h1>
 				
 				<c:forEach var = "naoPossuiDados" items = "${ranking.removidos }">
 					<p>${naoPossuiDados.nome } </p>

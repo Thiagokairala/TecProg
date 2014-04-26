@@ -48,11 +48,11 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- Fim da div topo -->
 			
 			<div id = "aviso">
-				<h1>Desculpe mas não somos idiotas =D</h1>
+				<h1><fmt:message key="SQLDetect.Stupid"></fmt:message></h1>
 	
-				<h2>Promete se comportar??</h2>
-				<p><a href="index.jsp">Sim!!</a></p>
-				<p><a href="http://www.dpf.gov.br/">Nao!!</a></p>
+				<h2><fmt:message key="SQLDetect.BeGood"></fmt:message></h2>
+				<p><a href="index.jsp"><fmt:message key="SQLDetect.Yes"></fmt:message></a></p>
+				<p><a href="http://www.dpf.gov.br/"><fmt:message key="SQLDetect.No"></fmt:message></a></p>
 			</div><!-- fim da div aviso -->
 			
 			<div id="rodape">

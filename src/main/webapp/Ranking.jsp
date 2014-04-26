@@ -48,12 +48,12 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- Fim da div topo -->
 			
 			<div id = "titulo">
-				<h1>Ranking Deputados</h1>
+				<h1><fmt:message key="CompleteRanking.DeputyRanking"></fmt:message></h1>
 			</div><!-- fim da id titulo -->
 				
 			<div id = "principal">
 				<div id = "melhores">
-					<h2>Os cinco mais presentes</h2>
+					<h2><fmt:message key="CompleteRanking.TheFiveMore"></fmt:message></h2>
 			
 						<c:forEach var = "melhores" items = "${ranking.melhores }">
 							<p>${melhores.nome }: ${melhores.porcentagem }</p>
@@ -61,7 +61,7 @@ the Free Software Foundation, either version 3 of the License, or
 				</div><!-- fim da id melhores -->
 			
 				<div id = "piores">
-					<h2>Os cinco mais ausentes:</h2>
+					<h2><fmt:message key="CompleteRanking.TheFivceLess"></fmt:message></h2>
 					
 					<c:forEach var = "piores" items = "${ranking.piores }">
 						<p>${piores.nome }: ${piores.porcentagem }</p>
@@ -70,7 +70,7 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- fim da id principal -->
 			
 			<div id = "auxiliar">
-				<h1>Deputados com dados não disponíveis:</h1>
+				<h1><fmt:message key="CompleteRanking.NotAvaliable"></fmt:message></h1>
 				
 				<c:forEach var = "naoPossuiDados" items = "${ranking.removidos }">
 					<p>${naoPossuiDados.nome } </p>
