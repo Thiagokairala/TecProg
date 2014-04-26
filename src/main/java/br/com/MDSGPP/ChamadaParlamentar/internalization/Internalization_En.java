@@ -27,6 +27,9 @@ public class Internalization_En extends ListResourceBundle {
 	
 	{ "trackDeputy.Home", "Home" },
 	{ "TrackDeputy.InsertDeputysName", "Enter the name of the deputy" },
+	
+	{ "TrackParty.Home", "Home" },
+	{ "TrackParty.InsertPartysName", "Enter the name of your party." },
 	};
 	
 	
