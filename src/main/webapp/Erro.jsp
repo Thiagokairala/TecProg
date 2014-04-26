@@ -47,7 +47,7 @@ the Free Software Foundation, either version 3 of the License, or
 	        </div><!-- Fim da div topo -->
 	                
 	        <div id = "principal">
-	            <h1>Desculpe-nos, esse erro já será corrigido!</h1>               
+	            <h1><fmt:message key="Error.CorrectedError"></fmt:message></h1>               
 	        </div><!-- fim da id principal -->
 	                
 	        <div id="rodape">

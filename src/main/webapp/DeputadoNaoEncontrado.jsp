@@ -49,10 +49,13 @@ the Free Software Foundation, either version 3 of the License, or
 		</div><!-- Fim da div topo -->
 		
 		<div id = "aviso">
-			<h1>Deputado Não Encontrado!</h1>
+			<h1><fmt:message key="DeputyNotFound.DeputyNotFound"></fmt:message></h1>
 			
 			<ul id = "voltar">
-				<li><a href="acompanharParlamentar">Deseja tentar novamente?</a></li>
+				<li><a href="acompanharParlamentar">
+					<fmt:message key="DeputyNotFound.TryAgain"></fmt:message>
+					</a>
+				</li>
 			</ul>
 		</div><!-- fim da id principal -->
 		

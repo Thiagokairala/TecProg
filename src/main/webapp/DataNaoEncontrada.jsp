@@ -49,10 +49,12 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- Fim da div topo -->
 			
 			<div id = "aviso">
-				<h1>Data Nao Encontrada</h1>
+				<h1><fmt:message key="DateNotFound.DateNotFound"></fmt:message></h1>
 				
 				<ul id = "voltar">
-					<li><a href="acompanharSessao">Deseja tentar novamente?</a></li>
+					<li><a href="acompanharSessao">
+						<fmt:message key="DateNotFound.TryAgain"></fmt:message>
+					</a></li>
 				</ul>
 			</div><!-- fim da id principal -->			
 			

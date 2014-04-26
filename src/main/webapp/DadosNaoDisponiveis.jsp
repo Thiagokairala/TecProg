@@ -56,8 +56,11 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- fim da id principal -->
 			
 			<div id = "mensagem">
-				<h1>Desculpe os dados deste deputado nao estao disponiveis!</h1>
-    			<p>Clique <a href="acompanharParlamentar">AQUI </a> para pesquisar outro parlamentar.</p>	    	
+				<h1><fmt:message key="DataNotAvailable.SearchOtherDeputys"></fmt:message></h1>
+    			<p><fmt:message key="DataNotAvailable.Click"></fmt:message> 
+    				<a href="acompanharParlamentar"><fmt:message key="DataNotAvailable.Here"></fmt:message> 
+    				</a><fmt:message key="DataNotAvailable.SearchOtherDeputys"></fmt:message></p>	    	
+			
 			</div><!-- Fim da id mensagem -->
 	
 			<div id="rodape">
