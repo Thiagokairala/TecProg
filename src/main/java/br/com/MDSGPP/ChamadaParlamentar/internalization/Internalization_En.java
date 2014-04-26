@@ -97,6 +97,8 @@ public class Internalization_En extends ListResourceBundle {
 			{ "CompleteRanking.DeputyRanking", "Deputy's ranking:" },
 			{ "CompleteRanking.DeputyWoData", "Deputy without data available:" },
 			
+			{ "DeputyPresents.Title", "Deputys Presents"},
+			
 			
 			
 	};
