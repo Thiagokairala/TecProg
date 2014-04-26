@@ -89,6 +89,13 @@ public class Internalization_En extends ListResourceBundle {
 			{ "HowWeAre.MDS", "Methods Software Development:"},
 			{ "HowWeAre.GPP", "Project and Portfolio Management Software:"},
 			
+			{ "RankingDeputy.ranking", "Ranking Deputy:"},
+			{ "RankingDeputy.TheFiveMore", "The five more presents" },
+			{ "RankingDeputy.TheFiveless", "The five less presents" },
+			{ "RankingDeputy.NotAvaliable", "Deputys with no data available"},
+			
+			
+			
 	};
 
 }
