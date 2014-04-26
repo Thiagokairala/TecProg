@@ -1,0 +1,8 @@
+br.com.MDSGPP.ChamadaParlamentar,,,,
+atualizacaoBanco,,,,
+Método,Variável,Tipo,funcionalidade,
+getDeputados,deputado,DeputadoDao,Inicialização do obejto deputado do tipo DeputadoDao para acessar os nomoes dos deputados.,
+verificaExistencia,nome,String,A partir da variável nome o software vireifica a existência do deputado na tabela deputados do banco e para preencher  a lista de deputados.,
+verificaExistencia,deputado,Deputados,"Acessar os atributos e métodos get e set da model Deputados, além de ser o retorno do método.",
+verificaExistencia,lista ,ArrayList<Deputados>,Lista quepossui os deputados existentes,
+verificaExistencia,i,int,Variável utilizada para varrer a Lista de Deputados para a verificação da existência do deputado.,

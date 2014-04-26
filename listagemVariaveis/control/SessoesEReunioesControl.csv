@@ -1,0 +1,12 @@
+br.com.MDSGPP.ChamadaParlamentar.control,,,
+SessoesEReunioesControl.java,,,
+Método,Variável,Tipo,funcionalidade
+passarSessao,descricao,String,Descricao da sessao que será procurada.
+passarSessao,dao,SessoesEReunioesDao,Objeto de sessoesEReunioesDao que será usado para achar a sessao.
+passarSessao,lista,ArrayList<String>,ArrayList onde serão armazenadas as sessoes.
+passarSessao,passar,SessoesEReunioes,Objeto de sessoesEReunioes que recebera os dados da sessao encontrada.
+arrumarListaDeputados,pagina,Integer,variável que recebe o numero da página atual.
+arrumarListaDeputados,deputadosPorPagina,Integer,Variável que recebe o numero de deputados em cada página.
+arrumarListaDeputados,deputadosPresentes,ArrayList<String>,ArrayList que recebe todos os deputados presentes na sessao encontrada.
+arrumarListaDeputados,listaPassar,ArrayList<String>,Lista que recebe todos os deputados presentes de só uma página.
+arrumarListaDeputados,i,Integer,Contador do for.

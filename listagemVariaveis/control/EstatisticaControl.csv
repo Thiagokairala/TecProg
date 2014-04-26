@@ -1,0 +1,25 @@
+br.com.MDSGPP.ChamadaParlamentar.control,,,
+EstatisticaControl,,,
+Método,Variável,Tipo,funcionalidade
+gerarEstatisticas,nome,String,Recebe o nome do deputado.
+gerarEstatisticas,estatistica,Estatistica,Receberá a estatística do deputado.
+gerarEstatisticas,dao,EstatisticaDao,Variável de conexão com o banco para pegar a estatística
+gerarEstatisticas,sessoes,SessoesEReunioesDao,Variável de conexão com o banco para pegar as sessoes
+gerarEstatisticas,numeroTotalSessao,Integer,Recebe o numero total de sessoes 
+gerarEstatisticas,estatistica,Estatistica,Receberá a estatística do deputado.
+gerarEstatisticas,dao,EstatisticaDao,Variável de conexão com o banco para pegar a estatística
+gerarEstatisticas,sessoes,SessoesEReunioesDao,Variável de conexão com o banco para pegar as sessoes
+calcularEstatistica,estatistica,Estatistica,Receberá a estatística do deputado.
+calcularEstatistica,sessoes,SessoesEReunioesDao,Variável de conexão com o banco para pegar as sessoes
+calcularEstatistica,numeroTotalSessao,Integer,Recebe o numero total de sessoes 
+calcularEstatistica,df,DecimalFormat,Variável que fará a formatação do numero com duas casas decimais.
+arrumarNomePesquisa,deputado,Deputados,Recebe o deputado.
+arrumarNomePesquisa,montar,String,Monta o nome de tratamento do deputado.
+passarListaCerta,pagina,Integer,Variável que recebe o numero da página.
+passarListaCerta,sessoesPorPagina,Integer,Variável que guarda quantas sessoes tem que cada página.
+passarListaCerta,listaPassada,ArrayList<String>,ArrayList com a lista recebida.
+passarListaCerta,i,Integer,Contador do for.
+passarListaCerta,listaPassar,ArrayList<String>,Lista que será passada como resultado.
+passarListaCerta,lista,ArrayList<String>,Recebe a lista ordenada.
+ordenarLista,lista,ArrayList<String>,Recebe a lista para ordená-la.
+ordenarLista,ordenada,ArrayList<String>,Guarda a lista ordenada.

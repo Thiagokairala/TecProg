@@ -1,0 +1,19 @@
+br.com.MDSGPP.ChamadaParlamentar.dao,,,
+SessoesEReunioesDao,,,
+Método,Variável,Tipo,funcionalidade
+adcionarDataNaTable,insert,ArrayList<String>,"É a lista com as datas que serão inseridas na tabela, recebe como parâmetro."
+adcionarDataNaTable,sql,String,Variável que recebe o código sql armazenado.
+adcionarDataNaTable,i,Integer,contador do for.
+adcionarDataNaTable,stmt,PreparedStatement,variável que cria a conexão com o banco de dados.
+adcionarSessaoNaTable,insert,ArrayList<String>,"É a lista com as datas que serão inseridas na tabela, recebe como parâmetro."
+adcionarSessaoNaTable,sql ,String,Variável que recebe o código sql armazenado.
+adcionarSessaoNaTable,stmt,PreparedStatement,variável que cria a conexão com o banco de dados.
+adcionarSessaoNaTable,i,Integer,contador do for.
+passarNumeroDeSessoes,sql,String,Variável que recebe o código sql armazenado.
+passarNumeroDeSessoes,stmt,PreparedStatement,variável que cria a conexão com o banco de dados.
+passarNumeroDeSessoes,rs,ResultSet,Variável que recebe o resultado da conexão com o banco.
+pegarSessoes, sql,String,Variável que recebe o código sql armazenado.
+pegarSessoes,stmt,PreparedStatement,variável que cria a conexão com o banco de dados.
+pegarSessoes,lista,ArrayList<SessoesEReunioes>,ArrayList que vai receber as sessoes 
+pegarSessoes,sessao,SessoesEReunioes,objeto de sessoesEReunioes que fará o setData.
+pegarSessoes,rs,ResultSet,Variável que recebe o resultado da conexão com o banco.

@@ -1,0 +1,10 @@
+br.com.MDSGPP.ChamadaParlamentar.Exception;;;;
+ExceptionSqlInjection;;;;
+Método;Variável;Tipo;funcionalidade;
+testeSqlInjection;aTestar;String;variavel que contem a string a ser testada pelo sql;
+testeSqlInjection;DROP;String;variavel que contem a palavra drop;
+testeSqlInjection;TRUNCATE;String;variavel que contem a palavra truncate;
+testeSqlInjection;ASPAS;String;variavel que contem a string referente a aspas;
+testeSqlInjection;ASPAS_SIMPLES;String;variavel que contem aspas simples;
+testeSqlInjection;COMENTARIO;String;variavel que contem o caracter resonsavel por iniciar comentario em sql;
+testeSqlInjection;PONT_E_VIRGULA;String;variavel que contem o ponto e virgula;

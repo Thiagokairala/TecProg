@@ -1,0 +1,13 @@
+br.com.MDSGPP.ChamadaParlamentar.model,,,
+Estatistica,,,
+Método,Variável,Tipo,funcionalidade
+getNumeroSessao,numeroSessao,String,Pega o numero da sessao.
+setNumeroSessao,numeroSessao,String,Altera o conteúdo da variável numeroSessao
+getTotalSessao,totalSessao,String,Pega o numero total de sessoes.
+setTotalSessao,totalSessao,String,Altera o conteúdo da variável totalSessao
+getNome,nome,String,Pega o nome da sessao.
+setNome,nome,String,Altera o nome da sessao.
+getPorcentagem,porcentagem,String,Pega a porcentagem do deputado.
+setPorcentagem,porcentagem,String,Altera o conteúdo da variável porcentagem.
+getLista,lista,ArrayList<String>,Pega todas as sessoes.
+setLista,lista,ArrayList<String>,Altera o conteúdo da variável lista.

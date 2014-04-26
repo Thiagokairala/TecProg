@@ -1,0 +1,13 @@
+br.com.MDSGPP.ChamadaParlamentar.control,,,
+DiaControl,,,
+Método,Variável,Tipo,funcionalidade
+getDias,lista,ArrayList<Dia>,lista que contera todas as descrições de todas as sessões
+getDias,diaDao,DiaDao,variavel que comanda a conexão do banco de dados com a table dia
+getDias,listaInverter,ArrayList<Dia>,variável que irá auxiliar na inversão da ordem da variavel lsita.
+getListaCerta,pagina,int,variavel que contem em qual pagina esta no documento, para que assim possa retornar a lsita correta.
+getListaCerta,datasPorPagina,int,variavel que contem o numero de sessoes que estarao na pagina.
+getListaCerta,dia,ArrayList<Dia>,variavel que contem todas as sessoes.
+getListaCerta,listaPassar,ArrayList<Dia>,variárivel que irá auxiliar no retorno de apenas os dias que importam.
+getListaCerta,i,int,variavel controladora do for do método.
+passarData,datas,String,variavel que contem a data a ser verificada.
+passarData,dia,Dia,variável que irá receber as sessoes que existiram em uma determinada data.

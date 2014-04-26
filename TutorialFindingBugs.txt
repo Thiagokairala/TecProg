@@ -1,0 +1,9 @@
+Using finding bugs as static code analysis tool.
+
+1- first, open eclipse go to help->market place.
+2- look for finding bugs.
+3- install it.
+4-after that, the eclipse re start, go on the project, right click on it, now the option 
+of finding bug is on the the menu, select it, and open the finding bug perspective on
+window->open perspective->others and search for finding bugs.
+5-after that the analysis are going to be available.

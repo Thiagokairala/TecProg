@@ -1,0 +1,53 @@
+br.com.MDSGPP.ChamadaParlamentar.classesDeConexao,,,
+ConexaoComWsDeputados.java,,,
+Método,Variável,Tipo,funcionalidade
+obterConexao,url,URL,passar o endpoint do webService.
+obterConexao,service,DeputadosSoapStub,Variável que conecta com o WebService.
+receberElementDeputados,service,DeputadosSoapStub,Variável que conecta com o WebService.
+criaLista,lista,ArrayList<Deputados>,Variável que armazena a lista de deputados.
+criaLista,deputados,ObterDeputadosResponseObterDeputadosResult,Variável que vem com os deputados do WebService
+criaLista,nome,NodeList,Recebe o nome do deputado.
+criaLista,nomeTratamento,NodeList,Recebe o nome de tratamento do deputado.
+criaLista,id,NodeList,Recebe o numero de identificação do deputado.
+criaLista,matricula,NodeList,Recebe a matrícula do deputado.
+criaLista,idParlamentar,NodeList,Recebe o numero de identificação do parlamentar.
+criaLista,sexo,NodeList,Recebe o sexo do deputado.
+criaLista,uf,NodeList,Recebe o UF do estado do deputado.
+criaLista,partido,NodeList,Recebe o partido do deputado.
+criaLista,gabinete,NodeList,Recebe o gabinete do deputado.
+criaLista,anexo,NodeList,Recebe o anexo onde o deputado trabalha.
+criaLista,fone,NodeList,Recebe o telefone do deputado.
+criaLista,email,NodeList,Recebe o e-mail do deputado.
+criaLista,i,Integer,Contador para o for.
+criaLista,idInt,Integer,Vai receber o Parse da identidade do deputado para inteiro.
+criaLista,nomeTratamentoTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,nomeTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,matriculaTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,idParlamentarTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,sexoTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,ufTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,partidoTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,gabineteTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,anexoTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,foneTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,emailTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaLista,matriculaInt,Integer,Recebe o parse para int da matricula do deputado.
+criaLista,idParlamentarInt,Integer,Recebe o parse para int da Id do parlamentar.
+criaLista,nomeText,String,Recebe o nome do deputado.
+criaLista,sexoText,String,Recebe o sexo do deputado.
+criaLista,ufText,String,Recebe o UF do estado do deputado.
+criaLista,partidoText,String,Recebe o partido do deputado.
+criaLista,gabineteText,String,Recebe o gabinete do deputado.
+criaLista,anexoText,String,Recebe o anexo onde o deputado trabalha.
+criaLista,foneText,String,Recebe o telefone do deputado.
+criaListaPartidos,lista,ArrayList<Partidos>,Recebe a lista de partidos existentes.
+criaListaPartidos,partidos,ObterPartidosCDResponseObterPartidosCDResult,Gera a conexão com o webService para receber os partidos.
+criaListaPartidos,nomePartido,NodeList,Recebe o nome do partido.
+criaListaPartidos,siglaPartido,NodeList,Recebe a sigla do partido.
+criaListaPartidos,dataExtincao,NodeList,Recebe a data.
+criaListaPartidos,i,Integer,Contador para o for.
+criaListaPartidos,nomePartidoTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaListaPartidos,siglaPartidoTemp ,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaListaPartidos,dataExtincaoTemp,MessageElement,"Recebe valor de cada NodeList, para separar cada NodeList"
+criaListaPartidos,nomePartidoText,String,Recebe o nome do partido.
+criaListaPartidos,siglaPartidoText,String,Recebe a sigla do partido.
