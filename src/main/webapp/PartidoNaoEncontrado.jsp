@@ -47,10 +47,10 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- Fim da div topo -->
 			
 			<div id = "aviso">
-				<h1>Partido Não Encontrado!</h1>
+				<h1><fmt:message key="PartyNotFound.Warning"></fmt:message></h1>
 				<ul id = "voltar">
 					<li>
-						<a href="autoCompletePartido">Deseja tentar novamente?</a>
+						<a href="autoCompletePartido"><fmt:message key="PartyNotFound.tryAgain"></fmt:message></a>
 					</li>
 				</ul>
 			</div><!-- fim da div aviso -->

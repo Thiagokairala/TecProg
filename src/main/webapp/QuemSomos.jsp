@@ -46,16 +46,16 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- Fim da div topo -->
 			
 			<div id = "somos">
-				<h1>Quem Somos:</h1>
-	            <p>Somos estudantes de Engenharia de Software da Universidade de Brasília.
-	            	<br>Integrantes:<br>
-	            	<br> <b>Métodos de Desenvolvimento de Software:</b>
+				<h1><fmt:message key="WhoWeAre.WhoWeAre"></fmt:message>:</h1>
+	            <p><fmt:message key="WhoWeAre.WeAre"></fmt:message>
+	            	<br><fmt:message key="WhoWeAre.Members"></fmt:message><br>
+	            	<br> <b><fmt:message key="WhoWeAre.MDS"></fmt:message></b>
 	            	<br><br>-Thiago Kairala
 	            	<br>-Eduardo Brasil Martins
 	            	<br>-Carlos Cruz
 	            	<br>-Bruno bragança
 	            	<br>-Rafael Fazzolino P. Barbosa<br>
-	            	<br> <b>Gestão de Portifólio e Projeto de Software:</b>
+	            	<br> <b><fmt:message key="WhoWeAre.GPP"></fmt:message></b>
 	            	<br><br>-Thabata Helen
 	            	<br>-Nilton Araruna
 	            	<br>-João Guilherme Araruna

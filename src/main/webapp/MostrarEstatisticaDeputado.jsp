@@ -105,18 +105,18 @@ the Free Software Foundation, either version 3 of the License, or
 			</div><!-- Fim da div container -->
 			
 			<div id = "dados">
-				<h1>Nome: ${estatistica.nome }</h1>
+				<h1><fmt:message key="ShowEstatistic.Name"></fmt:message>: ${estatistica.nome }</h1>
 				
-				<h2><b>Sessoes assistidas:</b></h2>
+				<h2><b><fmt:message key="ShowEstatistic.SessionsWhatched"></fmt:message>:</b></h2>
 				<p>${estatistica.numeroSessao }</p>
 				
-				<h2><b>Sessoes totais:</b></h2> 
+				<h2><b><fmt:message key="ShowEstatistic.TotalNumberSessions"></fmt:message>:</b></h2> 
 				<p>${estatistica.totalSessao }</p>
 				
-				<h2><b>Porcentagem:</b></h2> 
+				<h2><b><fmt:message key="ShowEstatistic.Percent"></fmt:message>:</b></h2> 
 				<p>${estatistica.porcentagem }</p>
 				
-				<h2><b>Sessoes:</b></h2>  
+				<h2><b><fmt:message key="ShowEstatistic.Sessions"></fmt:message>:</b></h2>  
 				<p>
 					<c:forEach var= "sessao" items = "${estatistica.lista }">
 						<td>
@@ -133,7 +133,7 @@ the Free Software Foundation, either version 3 of the License, or
 				<form name ="selecaoDeputado" id = "selecaoDeputado" 
                               action ="segundoParlamentar?primeiroParlamentar=${estatistica.nome }" 
                               method= "POST">
-					<h1>Deseja compará-lo com outro deputado?</h1>
+					<h1><fmt:message key="ShowEstatistic.Ask"></fmt:message></h1>
 					<input type = "text" name= "nome" id="nome" list = "deputados"
 								 autocomplete= "off"/>
 					

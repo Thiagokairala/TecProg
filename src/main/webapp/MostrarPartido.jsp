@@ -50,7 +50,7 @@ the Free Software Foundation, either version 3 of the License, or
 				<div id = "principal">
 					<h1>${partido.nomePartido } - ${partido.sigla }</h1>
 				
-					<h2>Média de presença: ${estatisticaPartido.porcentagem }%</h2>
+					<h2><fmt:message key="ShowParty.PresenceAverage"></fmt:message> ${estatisticaPartido.porcentagem }%</h2>
 					
 					<c:forEach var = "deputado" items="${partido.estatisticaDosDeputados}">
 						<td>

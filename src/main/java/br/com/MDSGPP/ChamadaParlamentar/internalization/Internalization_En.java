@@ -75,13 +75,11 @@ public class Internalization_En extends ListResourceBundle {
 			{ "PartyNotFound.warning", "Party not found!" },
 			{ "PartyNotFound.tryAgain", "Want to try again?" },
 			
-			{ "HowWeAre.HowWeAre", "How we are:" },
-			{ "HowWeAre.WeAre", "We are students of Software Engineering at the University of Brasilia" },
-			{ "HowWeAre.", "How we are." },
-			{ "HowWeAre.Members", "Members:" },
-			{ "HowWeAre.HowWeAre", "How we are:" },
-			{ "HowWeAre.MDS", "Methods Software Development:"},
-			{ "HowWeAre.GPP", "Project and Portfolio Management Software:"},
+			{ "WhoWeAre.WhoWeAre", "Who we are:" },
+			{ "WhoWeAre.WeAre", "We are students of Software Engineering at the University of Brasilia" },
+			{ "WhoWeAre.Members", "Members:" },
+			{ "WhoWeAre.MDS", "Methods Software Development:"},
+			{ "WhoWeAre.GPP", "Project and Portfolio Management Software:"},
 			
 	};
 
