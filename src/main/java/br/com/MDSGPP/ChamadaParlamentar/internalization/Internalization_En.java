@@ -99,6 +99,11 @@ public class Internalization_En extends ListResourceBundle {
 			
 			{ "DeputyPresents.Title", "Deputys Presents"},
 			
+			{ "SQLDetect.Stupid", "Sorry, but we aren't stupid =D" },
+			{ "SQLDetect.BeGood", "Do you promise be good??" },
+			{ "SQLDetect.Yes", "Yes!!" },
+			{ "SQLDetect.No", "No!!" },
+			
 			
 			
 	};
