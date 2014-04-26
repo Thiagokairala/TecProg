@@ -30,6 +30,12 @@ public class Internalization_En extends ListResourceBundle {
 	
 	{ "TrackParty.Home", "Home" },
 	{ "TrackParty.InsertPartysName", "Enter the name of your party." },
+	
+	{ "TrackSession.Home", "Home" },
+	{ "TrackSession.InsertDay", "Enter the day"},
+	{ "TrackSession.Page", "Page"},
+	{ "TrackSession.Date", "Date"},
+	
 	};
 	
 	
