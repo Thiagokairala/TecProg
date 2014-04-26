@@ -94,6 +94,9 @@ public class Internalization_En extends ListResourceBundle {
 			{ "RankingDeputy.TheFiveless", "The five less presents" },
 			{ "RankingDeputy.NotAvaliable", "Deputys with no data available"},
 			
+			{ "CompleteRanking.DeputyRanking", "Deputy's ranking:" },
+			{ "CompleteRanking.DeputyWoData", "Deputy without data available:" },
+			
 			
 			
 	};
