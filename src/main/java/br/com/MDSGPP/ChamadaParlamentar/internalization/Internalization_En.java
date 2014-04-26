@@ -81,6 +81,23 @@ public class Internalization_En extends ListResourceBundle {
 			{ "WhoWeAre.MDS", "Methods Software Development:"},
 			{ "WhoWeAre.GPP", "Project and Portfolio Management Software:"},
 			
+			{ "RankingDeputy.ranking", "Ranking Deputy:"},
+			{ "RankingDeputy.TheFiveMore", "The five more presents" },
+			{ "RankingDeputy.TheFiveless", "The five less presents" },
+			{ "RankingDeputy.NotAvaliable", "Deputys with no data available"},
+			
+			{ "CompleteRanking.DeputyRanking", "Deputy's ranking:" },
+			{ "CompleteRanking.DeputyWoData", "Deputy without data available:" },
+			
+			{ "DeputyPresents.Title", "Deputys Presents"},
+			
+			{ "SQLDetect.Stupid", "Sorry, but we aren't stupid =D" },
+			{ "SQLDetect.BeGood", "Do you promise be good??" },
+			{ "SQLDetect.Yes", "Yes!!" },
+			{ "SQLDetect.No", "No!!" },
+			
+			
+			
 	};
 
 }
