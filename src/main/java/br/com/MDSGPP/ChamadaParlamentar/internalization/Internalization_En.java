@@ -31,7 +31,15 @@ public class Internalization_En extends ListResourceBundle {
 	{ "TrackParty.Home", "Home" },
 	{ "TrackParty.InsertPartysName", "Enter the name of your party." },
 	
+<<<<<<< HEAD
 	{ "DataNotAvailable.SearchOtherDeputys", "Click here to search other deputys." },
+=======
+	{ "TrackSession.Home", "Home" },
+	{ "TrackSession.InsertDay", "Enter the day"},
+	{ "TrackSession.Page", "Page"},
+	{ "TrackSession.Date", "Date"},
+	
+>>>>>>> d368b03eee29808525837f39357307cc33dc394e
 	};
 	
 	
