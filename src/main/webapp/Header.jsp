@@ -38,8 +38,8 @@ the Free Software Foundation, either version 3 of the License, or
 		</div><!-- fim da div topo -->
 				
 		<div id = "language">
-			<a href= "changeLanguage?language=english"><img src="american_flag.png"></a>
-			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg"></a>
+			<a href= "changeLanguage?language=english"><img src="american_flag.png" id = "american"></a>
+			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg" id = "brazil"></a>
 		</div>
 		
 		<ul class="menu">
