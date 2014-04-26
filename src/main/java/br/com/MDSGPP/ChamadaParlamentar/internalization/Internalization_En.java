@@ -53,7 +53,18 @@ public class Internalization_En extends ListResourceBundle {
 			{ "Error.CorrectedError", "Sorry, this error will be corrected." },
 			
 			{ "WrongFormat.WrongDate", "Sorry, but the date entered by you is not correct." },
-
+			
+			{ "ShowComparisonDeputy.Name1", "Name:"},
+			{ "ShowComparisonDeputy.SessionsWhatched1", "Sessions Whatched:"},
+			{ "ShowComparisonDeputy.TotalNumberSessions1", "Number of sessions:"},
+			{ "ShowComparisonDeputy.Percent1", "Percent:"},
+			{ "ShowComparisonDeputy.Sessions1", "Sessions:"},
+			
+			{ "ShowComparisonDeputy.Name2", "Name:"},
+			{ "ShowComparisonDeputy.SessionsWhatched2", "Sessions Whatched:"},
+			{ "ShowComparisonDeputy.TotalNumberSessions2", "Number of sessions:"},
+			{ "ShowComparisonDeputy.Percent2", "Percent:"},
+			{ "ShowComparisonDeputy.Sessions2", "Sessions:"},
 	};
 
 }
