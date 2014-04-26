@@ -18,6 +18,11 @@ it under the terms of the GNU Affero General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 -->
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -26,17 +31,21 @@ the Free Software Foundation, either version 3 of the License, or
 		<link rel="shortcut icon" href="favicon.ico" >
 	</head>
 	<body>
+
 		<div id = "language">
 			<a href= "changeLanguage?language=english"><img src="pesquisa_lupa.png"></a>
 			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg"></a>
 		</div>
+
+		<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En"/>
+		
 		<div id = "topo">				
 		
 		</div><!-- fim da div topo -->
 				
 		<ul class="menu">
 			<li>
-				<a href="index.jsp">Home</a>
+				<a href="index.jsp"><fmt:message key="menu.Home"></fmt:message></a>
 			</li>
 			
 			<li>

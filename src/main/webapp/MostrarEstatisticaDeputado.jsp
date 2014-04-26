@@ -92,7 +92,7 @@ the Free Software Foundation, either version 3 of the License, or
 	<body>
 		<div id = "tudo">
 			<div id = "topo">
-				<jsp:include page='Header.html'/>
+				<jsp:include page='Header.jsp'/>
 			</div><!-- Fim da div topo -->
 			
 			<div id="container">
