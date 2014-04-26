@@ -66,9 +66,16 @@ public class Internalization_En extends ListResourceBundle {
 			{ "ShowComparisonDeputy.Percent2", "Percent:"},
 			{ "ShowComparisonDeputy.Sessions2", "Sessions:"},
 			
+			{ "ShowDay.Session", "Session:" },
+			{ "ShowDay.Sessions", "Sessions:"},
 			
-			
-			
+			{ "ShowEstatistic.Name", "Name:"},
+			{ "ShowEstatistic.SessionsWhatched", "Sessions Whatched:"},
+			{ "ShowEstatistic.TotalNumberSessions", "Number of sessions:"},
+			{ "ShowEstatistic.Percent", "Percent:"},
+			{ "ShowEstatistic.Sessions", "Sessions:"},
+			{ "ShowEstatistic.ask", "Want to compare it with other Deputy?"},
+
 	};
 
 }
