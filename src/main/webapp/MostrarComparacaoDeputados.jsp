@@ -115,28 +115,28 @@ the Free Software Foundation, either version 3 of the License, or
 	
 			<div id="alinahr">
 				<div id="primeiro">
-					<h1>Nome: ${estatisticaPrimeiro.nome }</h1>
+					<h1><fmt:message key="ShowComparisonDeputy.Name"></fmt:message>: ${estatisticaPrimeiro.nome }</h1>
 
 					<h2>
-						<b>Sessoes assistidas:</b>
+						<b><fmt:message key="ShowComparisonDeputy.SessionsWahtched"></fmt:message>:</b>
 					</h2>
 
 					<p>${estatisticaPrimeiro.numeroSessao }</p>
 	
 					<h2>
-						<b>Sessoes totais:</b>
+						<b><fmt:message key="ShowComparisonDeputy.TotalNumberSessions"></fmt:message>:</b>
 					</h2>
 
 					<p>${estatisticaPrimeiro.totalSessao }</p>
 	
 					<h2>
-						<b>Porcentagem:</b>
+						<b><fmt:message key="ShowComparisonDeputy.Percent"></fmt:message>:</b>
 					</h2>
 
 					<p>${estatisticaPrimeiro.porcentagem }</p>
 	
 					<h2>
-						<b>Sessoes:</b>
+						<b><fmt:message key="ShowComparisonDeputy.Sessions"></fmt:message>:</b>
 					</h2>
 	
 					<c:forEach var="sessao" items="${estatisticaPrimeiro.lista }">
@@ -150,28 +150,28 @@ the Free Software Foundation, either version 3 of the License, or
 				</div><!-- fim da div primeiro -->
 	
 				<div id="segundo">
-					<h1>Nome: ${estatisticaSegundo.nome }</h1>
+					<h1><fmt:message key="ShowComparisonDeputy.Name"></fmt:message>: ${estatisticaSegundo.nome }</h1>
 	
 					<h2>
-						<b>Sessoes assistidas:</b>
+						<b><fmt:message key="ShowComparisonDeputy.SessionsWahtched"></fmt:message>:</b>
 					</h2>
 					
 					<p>${estatisticaSegundo.numeroSessao }</p>
 	
 					<h2>
-						<b>Sessoes totais:</b>
+						<b><fmt:message key="ShowComparisonDeputy.TotalNumberSessions"></fmt:message>:</b>
 					</h2>
 					
 					<p>${estatisticaSegundo.totalSessao }</p>
 	
 					<h2>
-						<b>Porcentagem:</b>
+						<b><fmt:message key="ShowComparisonDeputy.Percent"></fmt:message>:</b>
 					</h2>
 					
 					<p>${estatisticaSegundo.porcentagem }</p>
 	
 					<h2>
-						<b>Sessoes:</b>
+						<b><fmt:message key="ShowComparisonDeputy.Sessions"></fmt:message>:</b>
 					</h2>
 	
 					<c:forEach var="sessao" items="${estatisticaSegundo.lista }">

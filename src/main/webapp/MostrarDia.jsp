@@ -48,11 +48,11 @@ the Free Software Foundation, either version 3 of the License, or
 			<h1>DATA: ${dia.data }</h1>
 			
 			<c:if test="${dia.numeroSessoes ==1 }">
-				<h2>Sessão:</h2>
+				<h2><fmt:message key="ShowDay.Session"></fmt:message>:</h2>
 			</c:if>
 			
 			<c:if test="${dia.numeroSessoes>1 }">
-				<h2>Sessões:</h2>
+				<h2><fmt:message key="ShowDay.Sessions"></fmt:message>:</h2>
 			</c:if>
 			
 			<div id = "mostra">

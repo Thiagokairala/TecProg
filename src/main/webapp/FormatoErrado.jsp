@@ -46,7 +46,7 @@ the Free Software Foundation, either version 3 of the License, or
             	<jsp:include page='Header.jsp'/>
 	        </div><!-- Fim da div topo -->
 	       
-	       	<h1>Desculpe mas a data entrada por voce nao esta correta</h1>
+	       	<h1><fmt:message key="WrongFormat.WrongDate"></fmt:message></h1>
 	        
 	        <div id="rodape">
 	                <jsp:include page = 'Footer.html'/>
