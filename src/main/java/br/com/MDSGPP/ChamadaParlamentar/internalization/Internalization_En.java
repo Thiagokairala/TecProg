@@ -41,6 +41,8 @@ public class Internalization_En extends ListResourceBundle {
 	{ "DateNotFound.DateNotFound", "Date not found"},
 	{ "DateNotFound.TryAgain", "Want to try again?"},
 	
+	{ "DeputyNotFound.DeputyNotFound", "Deputy Not Found!"},
+	{ "DeputyNotFound.TryAgain", "Want to try again?"},
 	
 	};
 	
