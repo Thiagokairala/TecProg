@@ -42,8 +42,8 @@ the Free Software Foundation, either version 3 of the License, or
 		</div><!-- fim da div topo -->
 				
 		<div id = "language">
-			<a href= "changeLanguage?language=english"><img src="american_flag.png"></a>
-			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg"></a>
+			<a href= "changeLanguage?language=english"><img src="american_flag.png" id = "american"></a>
+			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg" id = "brazil"></a>
 		</div>
 		
 		<ul class="menu">
@@ -52,41 +52,40 @@ the Free Software Foundation, either version 3 of the License, or
 			</li>
 			
 			<li>
-				<a>Parlamentar</a>
+				<a><fmt:message key="menu.Deputys"></fmt:message></a>
 				<ul>
 					<li>
-						<a href="acompanharParlamentar">Acompanhar
-							Parlamentar</a>
+						<a href="acompanharParlamentar"><fmt:message key="menu.TrackDeputy"></fmt:message></a>
 					</li>
 				</ul>
 			</li>
 	
-			<li><a>Partido</a>
+			<li><a><fmt:message key="menu.Party"></fmt:message></a>
 				<ul>
 					<li>
-						<a href="autoCompletePartido">Acompanhar Partido</a>
+						<a href="autoCompletePartido"><fmt:message key="menu.TrackParty"></fmt:message></a>
 					</li>
 				</ul>
 			</li>
 
 			<li>
-				<a>Sessões</a>
+				<a><fmt:message key="menu.Sessions"></fmt:message></a>
 				<ul>
 					<li>
-						<a href="acompanharSessao">Acompanhar Sess&atildeo</a>
+						<a href="acompanharSessao"><fmt:message key="menu.TrackSessions"></fmt:message></a>
 					</li>
 				</ul>
 			</li>
 
 			<li>
-				<a>Ranking</a>
+				<a><fmt:message key="menu.Ranking"></fmt:message></a>
 				<ul>
 					<li>
-						<a href="ranking">Top 5</a>
+						<a href="ranking"><fmt:message key="menu.RankingTop5"></fmt:message></a>
 					</li>
 					
 					<li>
-						<a href="rankingCompleto">Ranking Completo</a>
+						<a href="rankingCompleto"><fmt:message key="menu.CompleteRanking"></fmt:message></a>
 					</li>
 				</ul>
 			</li>
