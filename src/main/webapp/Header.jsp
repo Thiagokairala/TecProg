@@ -72,7 +72,7 @@ the Free Software Foundation, either version 3 of the License, or
 				<a><fmt:message key="menu.Sessions"></fmt:message></a>
 				<ul>
 					<li>
-						<a href="acompanharSessao"><fmt:message key="menu.TrackSessions"></fmt:message></a>
+						<a href="acompanharSessao"><fmt:message key="menu.TrackSession"></fmt:message></a>
 					</li>
 				</ul>
 			</li>
