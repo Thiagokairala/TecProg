@@ -43,7 +43,9 @@ the Free Software Foundation, either version 3 of the License, or
 	<body>
 		<%if(Language.getLanguage().equals("english")) { %>
 			<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En"/>
-		<%} %>
+		<%} else if(Language.getLanguage().equals("portuguese")) {%>
+			<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_Pt"/>
+		<%} %>	
 		<div id = "tudo">
 			<div id = "topo">
 				<jsp:include page='Header.jsp'/>

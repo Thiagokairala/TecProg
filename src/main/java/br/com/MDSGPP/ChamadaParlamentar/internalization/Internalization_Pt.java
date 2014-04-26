@@ -2,7 +2,7 @@ package br.com.MDSGPP.ChamadaParlamentar.internalization;
 
 import java.util.ListResourceBundle;
 
-public class Internalization_En extends ListResourceBundle {
+public class Internalization_Pt extends ListResourceBundle {
 
 	@Override
 	protected Object[][] getContents() {
