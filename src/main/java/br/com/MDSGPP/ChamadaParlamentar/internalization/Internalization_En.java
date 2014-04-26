@@ -10,8 +10,6 @@ public class Internalization_En extends ListResourceBundle {
 	}
 
 	static final Object[][] contents = {
-	
-	
 			/**
 			 * translates for header.
 			 */
@@ -47,6 +45,8 @@ public class Internalization_En extends ListResourceBundle {
 
 			{ "DeputyNotFound.DeputyNotFound", "Deputy Not Found!" },
 			{ "DeputyNotFound.TryAgain", "Want to try again?" },
+			
+			{ "Footer.WhoWeAre", "Who We Are"} 
 
 	};
 
