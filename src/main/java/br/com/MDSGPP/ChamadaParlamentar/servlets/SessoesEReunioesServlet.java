@@ -82,6 +82,7 @@ public class SessoesEReunioesServlet extends HttpServlet {
 		}
 
 		try {
+
 			rd.forward(request, response);
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
