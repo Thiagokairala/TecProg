@@ -31,18 +31,17 @@ the Free Software Foundation, either version 3 of the License, or
 		<link rel="shortcut icon" href="favicon.ico" >
 	</head>
 	<body>
-
-		<div id = "language">
-			<a href= "changeLanguage?language=english"><img src="pesquisa_lupa.png"></a>
-			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg"></a>
-		</div>
-
 		<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En"/>
 		
 		<div id = "topo">				
 		
 		</div><!-- fim da div topo -->
 				
+		<div id = "language">
+			<a href= "changeLanguage?language=english"><img src="american_flag.png"></a>
+			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg"></a>
+		</div>
+		
 		<ul class="menu">
 			<li>
 				<a href="index.jsp"><fmt:message key="menu.Home"></fmt:message></a>
@@ -89,3 +88,5 @@ the Free Software Foundation, either version 3 of the License, or
 			</li>
 		</ul>
 		<hr>
+		
+		
