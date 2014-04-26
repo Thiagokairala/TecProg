@@ -10,7 +10,8 @@ public class Internalization_En extends ListResourceBundle {
 	}
 
 	static final Object[][] contents = {
-
+	
+	
 			/**
 			 * translates for header.
 			 */
