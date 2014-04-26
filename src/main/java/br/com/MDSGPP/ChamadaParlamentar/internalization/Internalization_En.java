@@ -30,6 +30,8 @@ public class Internalization_En extends ListResourceBundle {
 	
 	{ "TrackParty.Home", "Home" },
 	{ "TrackParty.InsertPartysName", "Enter the name of your party." },
+	
+	{ "DataNotAvailable.SearchOtherDeputys", "Click here to search other deputys." },
 	};
 	
 	
