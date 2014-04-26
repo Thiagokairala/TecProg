@@ -49,8 +49,10 @@ public class PegarListaDeputados extends HttpServlet {
 			request.setAttribute("lista", lista);
 			rd = request.getRequestDispatcher("/AcompanharParlamentar.jsp");
 		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
 			rd = request.getRequestDispatcher("/Erro.jsp");
 		} catch (SQLException e) {
+			e.printStackTrace();
 			rd = request.getRequestDispatcher("/Erro.jsp");
 		}
 
