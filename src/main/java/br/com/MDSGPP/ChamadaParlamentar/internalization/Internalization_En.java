@@ -10,7 +10,6 @@ public class Internalization_En extends ListResourceBundle {
 	}
 
 	static final Object[][] contents = {
-
 			/**
 			 * translates for header.
 			 */
@@ -37,7 +36,7 @@ public class Internalization_En extends ListResourceBundle {
 			{ "DataNotAvailable.click", "Click" },
 			{ "DataNotAvailable.Here", "here" },
 			{ "DataNotAvailable.NoData",
-			"Sorry the data for this deputy is not available." },
+					"Sorry the data for this deputy is not available." },
 
 			{ "TrackSession.InsertDay", "Enter the day" },
 			{ "TrackSession.Page", "Page" }, { "TrackSession.Date", "Date" },
@@ -49,6 +48,9 @@ public class Internalization_En extends ListResourceBundle {
 			{ "DeputyNotFound.TryAgain", "Want to try again?" },
 
 			{ "Error.CorrectedError", "Sorry, this error will be corrected." },
+
+			{ "Footer.WhoWeAre", "Who We Are" },
+			{ "Error.CorrectedError", "Sorry, this error will be corrected." }
 
 	};
 
