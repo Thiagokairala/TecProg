@@ -50,7 +50,9 @@ public class Internalization_En extends ListResourceBundle {
 			{ "Error.CorrectedError", "Sorry, this error will be corrected." },
 
 			{ "Footer.WhoWeAre", "Who We Are" },
-			{ "Error.CorrectedError", "Sorry, this error will be corrected." }
+			{ "Error.CorrectedError", "Sorry, this error will be corrected." },
+			
+			{ "WrongFormat.WrongDate", "Sorry, but the date entered by you is not correct." },
 
 	};
 
