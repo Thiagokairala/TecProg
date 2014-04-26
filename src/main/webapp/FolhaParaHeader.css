@@ -26,7 +26,16 @@ the Free Software Foundation, either version 3 of the License, or
 	background-color: #333333;
 	height: 135px;
 }
+#american{
+	width:20px;
+	height:15px;
+}
 
+#brazil{
+	width:20px;
+	height:15px;
+	
+}
 #topo hr {
 	border: none;
 	background-color: #B4CBDF;
