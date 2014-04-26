@@ -26,6 +26,10 @@ the Free Software Foundation, either version 3 of the License, or
 		<link rel="shortcut icon" href="favicon.ico" >
 	</head>
 	<body>
+		<div id = "language">
+			<a href= "changeLanguage?language=english"><img src="pesquisa_lupa.png"></a>
+			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg"></a>
+		</div>
 		<div id = "topo">				
 		
 		</div><!-- fim da div topo -->
