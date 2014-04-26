@@ -11,37 +11,36 @@ public class Internalization_En extends ListResourceBundle {
 
 	static final Object[][] contents = {
 
-	/**
-	 * translates for header.
-	 */
-	{ "menu.Home", "Home" },
+			/**
+			 * translates for header.
+			 */
+			{ "menu.Home", "Home" },
 
-	{ "menu.Deputys", "Deputys" }, { "menu.TrackDeputy", "Track Deputy" },
+			{ "menu.Deputys", "Deputys" },
+			{ "menu.TrackDeputy", "Track Deputy" },
 
-	{ "menu.Party", "Party" }, { "menu.TrackParty", "Track Party" },
+			{ "menu.Party", "Party" },
+			{ "menu.TrackParty", "Track Party" },
 
-	{ "menu.Sessions", "Sessions" }, { "menu.TrackSession", "Track Session" },
+			{ "menu.Sessions", "Sessions" },
+			{ "menu.TrackSession", "Track Session" },
 
-	{ "menu.Ranking", "Ranking" }, { "menu.RankingTop5", "Top 5 Ranking" },
-			{ "menu.CompleteRanking", "Complete Ranking" }, 
-	
-	{ "trackDeputy.Home", "Home" },
-	{ "TrackDeputy.InsertDeputysName", "Enter the name of the deputy" },
-	
-	{ "TrackParty.Home", "Home" },
-	{ "TrackParty.InsertPartysName", "Enter the name of your party." },
-	
-<<<<<<< HEAD
-	{ "DataNotAvailable.SearchOtherDeputys", "Click here to search other deputys." },
-=======
-	{ "TrackSession.Home", "Home" },
-	{ "TrackSession.InsertDay", "Enter the day"},
-	{ "TrackSession.Page", "Page"},
-	{ "TrackSession.Date", "Date"},
-	
->>>>>>> d368b03eee29808525837f39357307cc33dc394e
+			{ "menu.Ranking", "Ranking" },
+			{ "menu.RankingTop5", "Top 5 Ranking" },
+			{ "menu.CompleteRanking", "Complete Ranking" },
+
+			{ "trackDeputy.Home", "Home" },
+			{ "TrackDeputy.InsertDeputysName", "Enter the name of the deputy" },
+
+			{ "TrackParty.Home", "Home" },
+			{ "TrackParty.InsertPartysName", "Enter the name of your party." },
+
+			{ "DataNotAvailable.SearchOtherDeputys",
+					"Click here to search other deputys." },
+
+			{ "TrackSession.InsertDay", "Enter the day" },
+			{ "TrackSession.Page", "Page" }, { "TrackSession.Date", "Date" },
+
 	};
-	
-	
 
 }
