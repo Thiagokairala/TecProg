@@ -1,0 +1,43 @@
+/*
+FILE: CSSAssistant.css.
+
+AUTHORS: 
+Thiago Ramires Kairala
+Thabata Helen Macedo Granja
+Eduardo Brasil Martins
+João Guilherme Santana Araruna
+Nilton Cesar Campos Araruna
+Rafael Fazzolino Pinto Barbosa
+
+DATE: 27/03/2014
+
+LICENSE:
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+*/
+@CHARSET "ISO-8859-1";
+
+#auxiliar{
+	background-color:#E6E8FA;
+	float: right;
+	width:390px;
+	margin-top: 9.3%;
+	margin-right: 10%;
+	height:355px;
+}
+
+#politica{
+	float:left;
+	margin-top: 2px;
+	margin-left: 1.5px;
+	margin-rigth: 10px;
+}
+
+#noticias {
+	float: right;
+	margin-top: 2px;
+	margin-right: 8.5px;
+	
+}

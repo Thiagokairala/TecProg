@@ -1,0 +1,41 @@
+/*
+FILE: CSSFooter.css.
+
+AUTHORS: 
+Thiago Ramires Kairala
+Thabata Helen Macedo Granja
+Eduardo Brasil Martins
+João Guilherme Santana Araruna
+Nilton Cesar Campos Araruna
+Rafael Fazzolino Pinto Barbosa
+
+DATE: 27/03/2014
+
+LICENSE:
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+*/
+@CHARSET "ISO-8859-1";
+
+#rodape {
+	background-color: #333333;
+	margin-top: 43.3%;
+	height: 1.3em;
+	clear: both;
+}
+
+#rodape p {
+	margin-left: 92%;
+}
+
+#rodape a {
+	color: #ffe4e1;
+	text-decoration: none;
+}
+
+#rodape a: hover {
+	font-style: italic;
+	font-weight: bold;
+}
