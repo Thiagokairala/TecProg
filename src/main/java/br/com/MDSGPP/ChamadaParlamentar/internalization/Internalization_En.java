@@ -75,6 +75,8 @@ public class Internalization_En extends ListResourceBundle {
 			{ "ShowEstatistic.Percent", "Percent:"},
 			{ "ShowEstatistic.Sessions", "Sessions:"},
 			{ "ShowEstatistic.ask", "Want to compare it with other Deputy?"},
+			
+			{ "ShowParty.PresenceAvarege", "Presence avarege:" },
 
 			{ "PartyNotFound.warning", "Party not found!" },
 			{ "PartyNotFound.tryAgain", "Want to try again?" },
