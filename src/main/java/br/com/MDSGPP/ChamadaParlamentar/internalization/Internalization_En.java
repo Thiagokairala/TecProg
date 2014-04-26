@@ -65,6 +65,10 @@ public class Internalization_En extends ListResourceBundle {
 			{ "ShowComparisonDeputy.TotalNumberSessions2", "Number of sessions:"},
 			{ "ShowComparisonDeputy.Percent2", "Percent:"},
 			{ "ShowComparisonDeputy.Sessions2", "Sessions:"},
+			
+			
+			
+			
 	};
 
 }
