@@ -22,7 +22,7 @@ the Free Software Foundation, either version 3 of the License, or
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
     import="br.com.MDSGPP.ChamadaParlamentar.util.Language;"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
@@ -33,11 +33,8 @@ the Free Software Foundation, either version 3 of the License, or
 		<link rel="shortcut icon" href="favicon.ico" >
 	</head>
 	<body>
-		<%if(Language.getLanguage().equals("english")) { %>
-			<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En"/>
-		<%} else if(Language.getLanguage().equals("portuguese")) {%>
-			<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_Pt"/>
-		<%} %>
+		<fmt:setBundle basename="${language }"/>
+		<c:out value="${language }"></c:out>
 		
 		<div id = "topo">				
 

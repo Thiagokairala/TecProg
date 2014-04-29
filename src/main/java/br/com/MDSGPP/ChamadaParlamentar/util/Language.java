@@ -2,18 +2,20 @@ package br.com.MDSGPP.ChamadaParlamentar.util;
 
 public class Language {
 
-	private static String language = "english";
+	private static String language = "br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En";
+	private final static String BASE_CLASS = Language.language = "br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_";
 
 	public static String getLanguage() {
 		return language;
 	}
 
 	public static void setLanguage(String language) {
-		Language.language = language;
+		if (language.equals("english")) {
+			Language.language = BASE_CLASS + "En";
+		}
+		if (language.equals("portugues")) {
+			Language.language = BASE_CLASS + "Pt";
+		}
 	}
-
-	
-
-	
 
 }

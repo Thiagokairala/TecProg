@@ -23,6 +23,8 @@ public class LanguageChangingServlet extends HttpServlet {
 
 		Language.setLanguage(language);
 		
+		request.getSession().setAttribute("language", Language.getLanguage());
+		
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		
 		rd.forward(request, response);
