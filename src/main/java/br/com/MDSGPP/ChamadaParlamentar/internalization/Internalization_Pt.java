@@ -13,88 +13,88 @@ public class Internalization_Pt extends ListResourceBundle {
 			/**
 			 * translates for header.
 			 */
-			{ "menu.Home", "Home" },
+			{ "menu.Home", "Página Inicial" },
 
-			{ "menu.Deputys", "Deputys" },
-			{ "menu.TrackDeputy", "Track Deputy" },
+			{ "menu.Deputys", "Deputados" },
+			{ "menu.TrackDeputy", "Procurar deputado" },
 
-			{ "menu.Party", "Party" },
-			{ "menu.TrackParty", "Track Party" },
+			{ "menu.Partido", "Partido" },
+			{ "menu.TrackParty", "Procurar partido" },
 
-			{ "menu.Sessions", "Sessions" },
+			{ "menu.Sessões", "Sessões" },
 			{ "menu.TrackSession", "Track Session" },
 
 			{ "menu.Ranking", "Ranking" },
-			{ "menu.RankingTop5", "Top 5 Ranking" },
-			{ "menu.CompleteRanking", "Complete Ranking" },
+			{ "menu.RankingTop5", "5 melhores do Ranking" },
+			{ "menu.CompleteRanking", "Ranking Completo" },
 
-			{ "TrackDeputy.InsertDeputysName", "Enter the name of the deputy" },
+			{ "TrackDeputy.InsertDeputysName", "Digite o nome do deputado" },
 
-			{ "TrackParty.InsertPartysName", "Enter the name of your party." },
+			{ "TrackParty.InsertPartysName", "Digite o nome do partido" },
 
-			{ "DataNotAvailable.SearchOtherDeputys", "to search other deputys." },
-			{ "DataNotAvailable.click", "Click" },
-			{ "DataNotAvailable.Here", "here" },
+			{ "DataNotAvailable.SearchOtherDeputys", "Procurar outros deputados" },
+			{ "DataNotAvailable.click", "Clique" },
+			{ "DataNotAvailable.Here", "aqui" },
 			{ "DataNotAvailable.NoData",
-					"Sorry the data for this deputy is not available." },
+					"Desculpe, os dados para este deputado não estão disponíveis." },
 
-			{ "TrackSession.InsertDay", "Enter the day" },
-			{ "TrackSession.Page", "Page" }, { "TrackSession.Date", "Date" },
+			{ "TrackSession.InsertDay", "Digite o dia" },
+			{ "TrackSession.Page", "Página" }, { "TrackSession.Date", "Data" },
 
-			{ "DateNotFound.DateNotFound", "Date not found" },
-			{ "DateNotFound.TryAgain", "Want to try again?" },
+			{ "DateNotFound.DateNotFound", "Data não encontrada." },
+			{ "DateNotFound.TryAgain", "Deseja tentar novamente?" },
 
-			{ "DeputyNotFound.DeputyNotFound", "Deputy Not Found!" },
-			{ "DeputyNotFound.TryAgain", "Want to try again?" },
+			{ "DeputyNotFound.DeputyNotFound", "Deputado não encontrado!" },
+			{ "DeputyNotFound.TryAgain", "Deseja tentar novamente?" },
 
-			{ "Error.CorrectedError", "Sorry, this error will be corrected." },
+			{ "Error.CorrectedError", "Desculpe, esse erro será corrigido." },
 
-			{ "Footer.WhoWeAre", "Who We Are" },
-			{ "Error.CorrectedError", "Sorry, this error will be corrected." },
+			{ "Footer.WhoWeAre", "Quem nós somos" },
+			{ "Error.CorrectedError", "Desculpe, esse erro será corrigido." },
 			
-			{ "WrongFormat.WrongDate", "Sorry, but the date entered by you is not correct." },
+			{ "WrongFormat.WrongDate", "Desculpe, mas a data que você digitou está incorreta." },
 			
-			{ "ShowComparisonDeputy.Name", "Name:"},
-			{ "ShowComparisonDeputy.SessionsWhatched", "Sessions Whatched:"},
-			{ "ShowComparisonDeputy.TotalNumberSessions", "Number of sessions:"},
-			{ "ShowComparisonDeputy.Percent", "Percent:"},
-			{ "ShowComparisonDeputy.Sessions", "Sessions:"},
+			{ "ShowComparisonDeputy.Name", "Nome:"},
+			{ "ShowComparisonDeputy.SessionsWhatched", "Sessões Assistidas:"},
+			{ "ShowComparisonDeputy.TotalNumberSessions", "Número de sessões:"},
+			{ "ShowComparisonDeputy.Percent", "Percentual:"},
+			{ "ShowComparisonDeputy.Sessions", "Sessões:"},
 			
-			{ "ShowDay.Session", "Session:" },
-			{ "ShowDay.Sessions", "Sessions:"},
+			{ "ShowDay.Session", "Sessão:" },
+			{ "ShowDay.Sessions", "Sessões:"},
 			
-			{ "ShowEstatistic.Name", "Name:"},
-			{ "ShowEstatistic.SessionsWhatched", "Sessions Whatched:"},
-			{ "ShowEstatistic.TotalNumberSessions", "Number of sessions:"},
-			{ "ShowEstatistic.Percent", "Percent:"},
-			{ "ShowEstatistic.Sessions", "Sessions:"},
-			{ "ShowEstatistic.ask", "Want to compare it with other Deputy?"},
+			{ "ShowEstatistic.Name", "Nome:"},
+			{ "ShowEstatistic.SessionsWhatched", "Sessões assistidas:"},
+			{ "ShowEstatistic.TotalNumberSessions", "Número de sessões:"},
+			{ "ShowEstatistic.Percent", "Percentual:"},
+			{ "ShowEstatistic.Sessions", "Sessões:"},
+			{ "ShowEstatistic.ask", "Deseja comparar este deputado com outro?"},
 			
-			{ "ShowParty.PresenceAvarege", "Presence avarege:" },
+			{ "ShowParty.PresenceAvarege", "Média de presença:" },
 
-			{ "PartyNotFound.warning", "Party not found!" },
-			{ "PartyNotFound.tryAgain", "Want to try again?" },
+			{ "PartyNotFound.warning", "Partido não encontrado!" },
+			{ "PartyNotFound.tryAgain", "Deseja tentar novamente?" },
 			
-			{ "WhoWeAre.WhoWeAre", "Who we are:" },
-			{ "WhoWeAre.WeAre", "We are students of Software Engineering at the University of Brasilia" },
-			{ "WhoWeAre.Members", "Members:" },
-			{ "WhoWeAre.MDS", "Methods Software Development:"},
-			{ "WhoWeAre.GPP", "Project and Portfolio Management Software:"},
+			{ "WhoWeAre.WhoWeAre", "Quem nós somos:" },
+			{ "WhoWeAre.WeAre", "Nós somos estudantes de Engenharia de Software da Universidade de Brasília" },
+			{ "WhoWeAre.Members", "Membros:" },
+			{ "WhoWeAre.MDS", "Métodos de Desenvolvimento de Software:"},
+			{ "WhoWeAre.GPP", "Gestão de Portifólios e Projetos de Software:"},
 			
-			{ "RankingDeputy.ranking", "Ranking Deputy:"},
-			{ "RankingDeputy.TheFiveMore", "The five more presents" },
-			{ "RankingDeputy.TheFiveless", "The five less presents" },
-			{ "RankingDeputy.NotAvaliable", "Deputys with no data available"},
+			{ "RankingDeputy.ranking", "Ranking dos Deputados:"},
+			{ "RankingDeputy.TheFiveMore", "Os cinco mais presentes" },
+			{ "RankingDeputy.TheFiveless", "Os cinco menos presentes" },
+			{ "RankingDeputy.NotAvaliable", "Deputados sem dados disponíveis:"},
 			
-			{ "CompleteRanking.DeputyRanking", "Deputy's ranking:" },
-			{ "CompleteRanking.DeputyNoData", "Deputy without data available:" },
+			{ "CompleteRanking.DeputyRanking", "Ranking dos Deputados:" },
+			{ "CompleteRanking.DeputyNoData", "Deputados sem dados disponíveis:" },
 			
-			{ "DeputyPresents.Title", "Deputys Presents"},
+			{ "DeputyPresents.Title", "Deputados Presentes"},
 			
-			{ "SQLDetect.Stupid", "Sorry, but we aren't stupid =D" },
-			{ "SQLDetect.BeGood", "Do you promise be good??" },
-			{ "SQLDetect.Yes", "Yes!!" },
-			{ "SQLDetect.No", "No!!" },
+			{ "SQLDetect.Stupid", "Desculpe, mas não somos idiotas =D" },
+			{ "SQLDetect.BeGood", "Você promete ser legal??" },
+			{ "SQLDetect.Yes", "Sim!!" },
+			{ "SQLDetect.No", "Não!!" },
 			
 			
 			

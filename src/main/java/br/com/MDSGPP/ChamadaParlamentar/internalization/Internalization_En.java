@@ -15,8 +15,8 @@ public class Internalization_En extends ListResourceBundle {
 			 */
 			{ "menu.Home", "Home" },
 
-			{ "menu.Deputys", "Deputys" },
-			{ "menu.TrackDeputy", "Track Deputy" },
+			{ "menu.Deputys", "Deputies" },
+			{ "menu.TrackDeputy", "Track Deputies" },
 
 			{ "menu.Party", "Party" },
 			{ "menu.TrackParty", "Track Party" },
@@ -70,7 +70,7 @@ public class Internalization_En extends ListResourceBundle {
 			{ "ShowEstatistic.Sessions", "Sessions:"},
 			{ "ShowEstatistic.ask", "Want to compare it with other Deputy?"},
 			
-			{ "ShowParty.PresenceAvarege", "Presence avarege:" },
+			{ "ShowParty.PresenceAvarege", "Presence average:" },
 
 			{ "PartyNotFound.warning", "Party not found!" },
 			{ "PartyNotFound.tryAgain", "Want to try again?" },
