@@ -34,8 +34,6 @@ the Free Software Foundation, either version 3 of the License, or
 	</head>
 	<body>
 		<fmt:setBundle basename="${language }"/>
-		<c:out value="${language }"></c:out>
-		
 		<div id = "topo">				
 
 		</div><!-- fim da div topo -->
@@ -43,6 +41,7 @@ the Free Software Foundation, either version 3 of the License, or
 		<div id = "language">
 			<a href= "changeLanguage?language=english"><img src="american_flag.png" id = "american"></a>
 			<a href= "changeLanguage?language=portuguese"><img src="brasil_flag.jpg" id = "brazil"></a>
+			<a href= "changeLanguage?language=french"><img src="france_flag.jpg" id = "france"></a>
 		</div>
 		
 		<ul class="menu">

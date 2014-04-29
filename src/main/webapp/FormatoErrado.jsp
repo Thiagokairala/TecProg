@@ -38,9 +38,7 @@ the Free Software Foundation, either version 3 of the License, or
 		<title>Chamada Parlamentar</title>
 	</head>
 	<body>
-		<%if(Language.getLanguage().equals("english")) { %>
-			<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En"/>
-		<%} %>
+		<fmt:setBundle basename="${language }"/>
         <div id = "tudo">
 	        <div id = "topo">
             	<jsp:include page='Header.jsp'/>

@@ -41,11 +41,7 @@ the Free Software Foundation, either version 3 of the License, or
 		<title>Chamada Parlamentar</title>
 	</head>
 	<body>
-		<%if(Language.getLanguage().equals("english")) { %>
-			<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_En"/>
-		<%} else if(Language.getLanguage().equals("portuguese")) {%>
-			<fmt:setBundle basename="br.com.MDSGPP.ChamadaParlamentar.internalization.Internalization_Pt"/>
-		<%} %>
+		<fmt:setBundle basename="${language }"/>
 		<div id = "tudo">
 		
 			<div id = "topo">
@@ -57,7 +53,7 @@ the Free Software Foundation, either version 3 of the License, or
 					<h1>Sessoes:</h1>
 					<form name="selecaoData" id="selecaoData" action="sessaoPorData"
 							method="POST">
-						<h3>Digite o dia que deseja pesquisar:
+						<h3><fmt:message key="TrackSession.InsertDay"></fmt:message>
 							<input type="text" name="datas" id="datas" list="datasAuto" autocomplete= "off" />
 							
 							<datalist id="datasAuto">
