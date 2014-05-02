@@ -103,22 +103,22 @@ public class Internalization_Fr extends ListResourceBundle {
 			{ "SQLDetect.Yes", "Oui!!" },
 			{ "SQLDetect.No", "Non!!" },
 
-			{ "index.openData", "Open data law" },
+			{ "index.openData", "Droit de données ouverte" },
 			{
 					"index.firstParagraph",
-					"According to the definition from the Open Knowledge Foundation, the data are open when anyone"
-							+ " can use it freely, re-use it and share them, being this one, at maximum, the demand of tell where he got the data from,"
-							+ " and keeping the license. That's usually satisfied by publishing the data on open format and open license." },
+					"Selon la définition de l'Open Knowledge Foundation, les données sont ouverts quand quelqu'un"
+							+ "peuvent utiliser librement, ré-utiliser et de les partager, en étant celui, au maximum, à la demande de dire où il a obtenu les données de,"
+							+ "et le maintien de la licence. C'est généralement satisfaite par la publication des données sur le format ouvert et licence ouverte." },
 
 			{ "index.secondParagraph",
-					"The open data are laid about three basic laws and eight principals." },
+					"Les données ouvertes sont disposées sur trois lois fondamentales et huit directeurs." },
 			{
 					"index.thirdParagraph",
-					"The three laws:<br>The specialist at public policy and activist of open data "
-							+ "David Eaves<br> proposed the following \"laws\":<br> If the data can not be found and indexed in the Web, it does not exist;"
-							+ "<br> If not already open and available in a machine readable format, it can not be reused;"
-							+ "<br> If any legal provision does not permit its replication, it is not useful;<br> The laws were proposed for Open Government Data, "
-							+ "but you can say that they apply to Open Data in general. " },
+					"Les trois lois:<br> Le spécialiste de la politique publique et activiste de données ouverte "
+							+ "David Eaves<br> proposé ce qui suit \"laws\":<br> Si les données ne peuvent pas être trouvés et indexés dans le Web, il n'existe pas;"
+							+ "<br> Si ce n'est pas déjà ouvert et disponible dans un format lisible par une machine, il ne peut pas être réutilisé;"
+							+ "<br> Si une disposition juridique ne permet pas sa réplication, il n'est pas utile; <br> Les lois ont été proposées pour Open Data gouvernement, "
+							+ " mais vous pouvez dire qu'ils s'appliquent à l'ouverture des données en général. " },
 
 	};
 
