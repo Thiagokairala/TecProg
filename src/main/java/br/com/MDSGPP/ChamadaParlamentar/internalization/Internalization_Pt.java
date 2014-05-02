@@ -98,20 +98,26 @@ public class Internalization_Pt extends ListResourceBundle {
 
 			{ "SQLDetect.Stupid", "Desculpe, mas não somos idiotas =D" },
 			{ "SQLDetect.BeGood", "Você promete ser legal??" },
-			{ "SQLDetect.Yes", "Sim!!" }, { "SQLDetect.No", "Não!!" },
+			{ "SQLDetect.Yes", "Sim!!" },
+			{ "SQLDetect.No", "Não!!" },
 
 			{ "index.openData", "A lei dos dados abertos" },
-			{ "index.firstParagraph", "Segundo a definição da Open Knowledge Foundation, em suma dados são abertos "+
-                "quando qualquer pessoa pode livremente usá-los, reutilizá-los e redistribuí-los, estando sujeito a, "+
-                "no máximo, a exigência de creditar a sua autoria e compartilhar a mesma licença. "+
-                "Isso Geralmente é satisfeito pela publicação dos dados em formato aberto e sob uma licença aberta."}
+			{
+					"index.firstParagraph",
+					"Segundo a definição da Open Knowledge Foundation, em suma dados são abertos "
+							+ "quando qualquer pessoa pode livremente usá-los, reutilizá-los e redistribuí-los, estando sujeito a, "
+							+ "no máximo, a exigência de creditar a sua autoria e compartilhar a mesma licença. "
+							+ "Isso Geralmente é satisfeito pela publicação dos dados em formato aberto e sob uma licença aberta." },
 
-            { "index.secondParagraph", "Os dados abertos também são pautados pelas três leis e oito princípios."}
-            { "index.thirdParagraph", "As três leis:<br>O especialista em políticas públicas e ativista dos dados abertos "+
-                "David Eaves<br> propôs as seguintes \"leis\":<br> Se o dado não pode ser encontrado e indexado na Web, "+
-                "ele não existe<br> Se não estiver aberto e disponível em formato compreensível por máquina, <br> ele não pode ser "+
-                "reaproveitado; <br> Se algum dispositivo legal nao permitir sua replicação, ele nao é útil<br> As leis foram propostas "+
-                "para os Dados Abertos Governamentais, mas<br> pode-se dizer que elas se aplicam aos Dados Abertos de forma geral."},
+			{ "index.secondParagraph",
+					"Os dados abertos também são pautados pelas três leis e oito princípios." },
+			{
+					"index.thirdParagraph",
+					"As três leis:<br>O especialista em políticas públicas e ativista dos dados abertos "
+							+ "David Eaves<br> propôs as seguintes \"leis\":<br> Se o dado não pode ser encontrado e indexado na Web, "
+							+ "ele não existe<br> Se não estiver aberto e disponível em formato compreensível por máquina, <br> ele não pode ser "
+							+ "reaproveitado; <br> Se algum dispositivo legal nao permitir sua replicação, ele nao é útil<br> As leis foram propostas "
+							+ "para os Dados Abertos Governamentais, mas<br> pode-se dizer que elas se aplicam aos Dados Abertos de forma geral." },
 
 	};
 

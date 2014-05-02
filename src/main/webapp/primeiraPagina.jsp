@@ -45,12 +45,12 @@ the Free Software Foundation, either version 3 of the License, or
 			
 			<div id = "arrumar">
 				<div id = "principal">
-					<h1>><fmt:message key="index.openData"></fmt:message</h1>
-		            <p>><fmt:message key="index.firstParagraph"></fmt:message</p>
+					<h1><fmt:message key="index.openData"></fmt:message></h1>
+		            <p><fmt:message key="index.firstParagraph"></fmt:message></p>
 		
-		            <p>><fmt:message key="index.secondParagraph"></fmt:message</p>
+		            <p><fmt:message key="index.secondParagraph"></fmt:message></p>
 		
-		            <p>><fmt:message key="index.thirdParagraph"></fmt:message</p>
+		            <p><fmt:message key="index.thirdParagraph"></fmt:message></p>
 				</div><!-- fim da id principal -->
 			
 				<div id = "auxiliar">

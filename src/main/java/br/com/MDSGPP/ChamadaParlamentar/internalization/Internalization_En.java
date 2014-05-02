@@ -102,11 +102,11 @@ public class Internalization_En extends ListResourceBundle {
 			{ "index.openData", "Open data law" },
 			{ "index.firstParagraph", "According to the definition from the Open Knowledge Foundation, the data are open when anyone"+
                     " can use it freely, re-use it and share them, being this one, at maximum, the demand of tell where he got the data from,"+
-                    " and keeping the license. That's usually satisfied by publishing the data on open format and open license."}
+                    " and keeping the license. That's usually satisfied by publishing the data on open format and open license."},
 
-            { "index.secondParagraph", "The open data are laid about three basic laws and eight principals."}
+            { "index.secondParagraph", "The open data are laid about three basic laws and eight principals."},
             { "index.thirdParagraph", "The three laws:<br>The specialist at public policy and activist of open data "+
-                "David Eaves<br> proposed the following \"laws\":<br> If the data can not be found and indexed in the Web, it does not exist;"
+                "David Eaves<br> proposed the following \"laws\":<br> If the data can not be found and indexed in the Web, it does not exist;" +
                 "<br> If not already open and available in a machine readable format, it can not be reused;"+
                 "<br> If any legal provision does not permit its replication, it is not useful;<br> The laws were proposed for Open Government Data, "+
                 "but you can say that they apply to Open Data in general. "},
