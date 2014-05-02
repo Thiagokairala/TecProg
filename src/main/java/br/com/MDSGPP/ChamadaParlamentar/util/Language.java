@@ -10,7 +10,6 @@ public class Language {
 	}
 
 	public static void setLanguage(String language) {
-		System.out.println(language);
 		if (language.equals("english")) {
 			Language.language = BASE_CLASS + "En";
 		}

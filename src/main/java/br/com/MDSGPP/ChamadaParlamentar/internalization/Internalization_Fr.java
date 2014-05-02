@@ -16,28 +16,28 @@ public class Internalization_Fr extends ListResourceBundle {
 			{ "menu.Home", "Début" },
 
 			{ "menu.Deputys", "Députés" },
-			{ "menu.TrackDeputy", "ChercherDéputé" },
+			{ "menu.TrackDeputy", "Chercher Député" },
 
-			{ "menu.Party", "PartiPolitique" },
-			{ "menu.TrackParty", "ChercherPartiPolitique" },
+			{ "menu.Party", "Parti Politique" },
+			{ "menu.TrackParty", "Chercher Parti Politique" },
 
 			{ "menu.Sessions", "Sessions" },
 			{ "menu.TrackSession", "Chercher Session" },
 
 			{ "menu.Ranking", "Classement" },
 			{ "menu.RankingTop5", "Top 5 Classement" },
-			{ "menu.CompleteRanking", "ClassementComplet" },
+			{ "menu.CompleteRanking", "Classement Complet" },
 
-			{ "TrackDeputy.InsertDeputysName", "Entrezlenomdudéputé" },
+			{ "TrackDeputy.InsertDeputysName", "Entrez le nom du député" },
 
-			{ "TrackParty.InsertPartysName", "Entrezlenomdu parti politique." },
+			{ "TrackParty.InsertPartysName", "Entrez le nom du parti politique." },
 
 			{ "DataNotAvailable.SearchOtherDeputys",
-					"à larecherche d'autresdéputés." },
+					"à la recherche d'autresdéputés." },
 			{ "DataNotAvailable.click", "Clic" },
 			{ "DataNotAvailable.Here", "ici" },
 			{ "DataNotAvailable.NoData",
-					"Désolélesdonnéespourcedéputé n'est pasdisponible." },
+					"Désolé les don nées pour ce député n'est pas disponible." },
 
 			{ "TrackSession.InsertDay", "Entrez le jour" },
 			{ "TrackSession.Page", "Page" },
@@ -52,7 +52,7 @@ public class Internalization_Fr extends ListResourceBundle {
 			{ "Error.CorrectedError", "Désolé, cetteerreur sera corrigée." },
 
 			{ "Footer.WhoWeAre", "Qui nous sommes" },
-			{ "Error.CorrectedError", "Désolé, cetteerreurseracorrigée." },
+			{ "Error.CorrectedError", "Désolé, cet te erreur ser a corrigée." },
 
 			{ "WrongFormat.WrongDate",
 					"Désolé, mais la date indiquée n'est pascorrecte." },
