@@ -45,28 +45,12 @@ the Free Software Foundation, either version 3 of the License, or
 			
 			<div id = "arrumar">
 				<div id = "principal">
-					<h1>A lei dos dados abertos</h1>
-		            <p>Segundo a definição da Open Knowledge Foundation, em suma
-		          	dados são abertos quando qualquer pessoa pode livremente usá-los,
-		            reutilizá-los e redistribuí-los, estando sujeito a, no máximo, a
-		            exigência de creditar a sua autoria e compartilhar a mesma licença.
-		            Isso Geralmente é satisfeito pela publicação dos dados em formato
-		            aberto e sob uma licença aberta.</p>
+					<h1>><fmt:message key="index.openData"></fmt:message</h1>
+		            <p>><fmt:message key="index.firstParagraph"></fmt:message</p>
 		
-		            <p>Os dados abertos também são pautados pelas três leis e oito
-		            princípios.</p>
+		            <p>><fmt:message key="index.secondParagraph"></fmt:message</p>
 		
-		            <p>
-		             As três leis:<br>O especialista em políticas públicas e
-		            ativista dos dados abertos David Eaves<br> propôs as seguintes
-		            "leis":<br> Se o dado não pode ser encontrado e indexado na Web,
-		            ele não existe<br> Se não estiver aberto e disponível em
-		            formato compreensível por máquina, <br> ele não pode ser
-		            reaproveitado; <br> Se algum dispositivo legal nao permitir
-		            sua replicação, ele nao é útil<br> As leis foram propostas para
-		            os Dados Abertos Governamentais, mas<br> pode-se dizer que elas
-		            se aplicam aos Dados Abertos de forma geral.
-		            </p>
+		            <p>><fmt:message key="index.thirdParagraph"></fmt:message</p>
 				</div><!-- fim da id principal -->
 			
 				<div id = "auxiliar">
