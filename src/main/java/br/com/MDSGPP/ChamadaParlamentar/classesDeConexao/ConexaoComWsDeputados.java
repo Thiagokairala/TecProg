@@ -1,12 +1,5 @@
 /**
  * Class: ConnectionWithWSDeputados
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -255,7 +248,7 @@ public class ConexaoComWsDeputados {
 				partidoAdicionar.setSigla(siglaPartidoText);
 				partidoAdicionar.setNomePartido(nomePartidoText);
 
-				// se essa expressao for falsa
+				// se for falsa
 				if (!nomePartidoText.equalsIgnoreCase("sem partido")) {
 					lista.add(partidoAdicionar);
 				}
