@@ -1,12 +1,5 @@
 /**
  * Class: SessionsByDateServlet
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -37,47 +30,47 @@ import br.com.MDSGPP.ChamadaParlamentar.model.Dia;
 
 public class SessoesPorData extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * This is the only method of the class, is the method to connect the
-	 * servlet with de jsp page.
-	 */
-	protected void service(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = null;
+    /**
+     * This is the only method of the class, is the method to connect the
+     * servlet with de jsp page.
+     */
+    protected void service(HttpServletRequest request,
+	    HttpServletResponse response) throws ServletException, IOException {
+	RequestDispatcher rd = null;
 
-		String data = request.getParameter("datas");
-		if (ExceptionSqlInjection.testeSqlInjection(data)) {
-			try {
-				new DiaControl();
-				Dia dia = DiaControl.passarData(data);
+	String data = request.getParameter("datas");
+	if (ExceptionSqlInjection.testeSqlInjection(data)) {
+	    try {
+		new DiaControl();
+		Dia dia = DiaControl.passarData(data);
 
-				try {
-					dia.getListaSessoes().size();
-				} catch (NullPointerException e1) {
-					throw new DataNaoEncontradaException();
-				}
-
-				request.setAttribute("dia", dia);
-				rd = request.getRequestDispatcher("/MostrarDia.jsp");
-
-			} catch (ClassNotFoundException e) {
-				rd = request.getRequestDispatcher("/Erro.jsp");
-			} catch (SQLException e) {
-				rd = request.getRequestDispatcher("/Erro.jsp");
-			} catch (DataFormatoErradoException e) {
-				rd = request.getRequestDispatcher("/FormatoErrado.jsp");
-			} catch (DataNaoEncontradaException e) {
-				rd = request.getRequestDispatcher("/DataNaoEncontrada.jsp");
-			} catch (ListaVaziaException e) {
-				rd = request.getRequestDispatcher("/DataNaoEncontrada.jsp");
-			}
-		} else {
-			rd = request.getRequestDispatcher("SqlDetectado.jsp");
+		try {
+		    dia.getListaSessoes().size();
+		} catch (NullPointerException e1) {
+		    throw new DataNaoEncontradaException();
 		}
 
-		rd.forward(request, response);
+		request.setAttribute("dia", dia);
+		rd = request.getRequestDispatcher("/MostrarDia.jsp");
 
+	    } catch (ClassNotFoundException e) {
+		rd = request.getRequestDispatcher("/Erro.jsp");
+	    } catch (SQLException e) {
+		rd = request.getRequestDispatcher("/Erro.jsp");
+	    } catch (DataFormatoErradoException e) {
+		rd = request.getRequestDispatcher("/FormatoErrado.jsp");
+	    } catch (DataNaoEncontradaException e) {
+		rd = request.getRequestDispatcher("/DataNaoEncontrada.jsp");
+	    } catch (ListaVaziaException e) {
+		rd = request.getRequestDispatcher("/DataNaoEncontrada.jsp");
+	    }
+	} else {
+	    rd = request.getRequestDispatcher("SqlDetectado.jsp");
 	}
+
+	rd.forward(request, response);
+
+    }
 }
