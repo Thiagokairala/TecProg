@@ -19,6 +19,7 @@ import br.com.MDSGPP.ChamadaParlamentar.model.SessoesEReunioes;
 
 public final class SessoesEReunioesControl {
 
+	private final static int zero = 0;
 	/**
 	 * Method that bridges the gap between the Dao and Model about the sessions.
 	 * 
@@ -30,6 +31,7 @@ public final class SessoesEReunioesControl {
 	 * @throws SQLException
 	 *             if miss spelled SQL is entered.
 	 */
+	
 	public static SessoesEReunioes passarSessao(String descricao)
 			throws ClassNotFoundException, SQLException {
 		SessoesEReunioesDao dao = new SessoesEReunioesDao();
@@ -55,8 +57,8 @@ public final class SessoesEReunioesControl {
 			int deputadosPorPagina, ArrayList<String> deputadosPresentes) {
 		ArrayList<String> listaPassar = new ArrayList<String>();
 
-		for (int i = 0; i < deputadosPorPagina; i++) {
-			if (pagina == 0) {
+		for (int i = zero; i < deputadosPorPagina; i++) {
+			if (pagina == zero) {
 				listaPassar.add(deputadosPresentes.get(i));
 			} else {
 				if (i + (pagina * deputadosPorPagina) < deputadosPresentes
