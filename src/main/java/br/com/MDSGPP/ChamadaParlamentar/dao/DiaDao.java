@@ -1,12 +1,5 @@
 /**
  * Class: DayDao
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -29,7 +22,8 @@ import br.com.MDSGPP.ChamadaParlamentar.model.Dia;
 import br.com.MDSGPP.ChamadaParlamentar.model.SessoesEReunioes;
 
 public class DiaDao extends ConnectionFactory {
-
+	
+	private final static int zero = 0;
 	private static final String DATAS = "datas";
 
 	public DiaDao() throws ClassNotFoundException, SQLException {
@@ -77,12 +71,12 @@ public class DiaDao extends ConnectionFactory {
 	 */
 	public static ArrayList<Dia> popularListaDia(ResultSet rs,
 			ArrayList<Dia> lista) throws SQLException {
-		int cont = 0;
+		int cont = zero;
 
 		while (rs.next()) {
 			String descricao = rs.getString("sessao");
 			String descAux = descricao;
-			descricao = descricao.split(" -")[0];
+			descricao = descricao.split(" -")[zero];
 
 			boolean teste = lista.get(cont).getData()
 					.equalsIgnoreCase(rs.getString(DATAS));
@@ -116,10 +110,10 @@ public class DiaDao extends ConnectionFactory {
 			DataFormatoErradoException {
 		ArrayList<Dia> lista = new ArrayList<Dia>();
 
-		int controle = 0;
+		int controle = zero;
 
 		while (rs.next()) {
-			if (lista.size() == 0) {
+			if (lista.size() == zero) {
 				Dia dia = new Dia();
 				dia.setData(rs.getString(DATAS));
 				lista.add(dia);
