@@ -23,84 +23,86 @@ import br.com.MDSGPP.ChamadaParlamentar.model.Dia;
 
 public final class DiaControl {
 
-	/**
-	 * This method is going to get all the sessions that happened.
-	 * 
-	 * @return returns an {@link ArrayList} of {@link Dia} containing the
-	 *         sessions by chronological order.
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
-	 * @throws DataFormatoErradoException
-	 */
-	public static ArrayList<Dia> getDias() throws ClassNotFoundException,
-			SQLException, DataFormatoErradoException {
-		ArrayList<Dia> lista;
-		DiaDao diaDao = new DiaDao();
+    /**
+     * This method is going to get all the sessions that happened.
+     * 
+     * @return returns an {@link ArrayList} of {@link Dia} containing the
+     *         sessions by chronological order.
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     * @throws DataFormatoErradoException
+     */
+    public static ArrayList<Dia> getDias() throws ClassNotFoundException,
+	    SQLException, DataFormatoErradoException {
+	ArrayList<Dia> lista;
+	DiaDao diaDao = new DiaDao();
 
-		lista = diaDao.buscarTodasDescricoes();
+	lista = diaDao.buscarTodasDescricoes();
 
-		ArrayList<Dia> listaInverter = new ArrayList<Dia>();
+	ArrayList<Dia> listaInverter = new ArrayList<Dia>();
 
-		for (int i = 0; i < lista.size(); i++) {
-			listaInverter.add(lista.get(lista.size() - 1 - i));
-		}
-
-		return listaInverter;
+	final int lastPosition = lista.size() - 1;
+	for (int i = 0; i < lista.size(); i++) {
+	    listaInverter.add(lista.get(lastPosition - i));
 	}
 
-	/**
-	 * This method is supposed to give the right list for each page.
-	 * 
-	 * @param pagina
-	 *            Integer, the index of the page the user is in.
-	 * @param datasPorPagina
-	 *            Integer, how many dates in each page.
-	 * @param dia
-	 *            {@link ArrayList} of {@link Dia} containing all the sessions.
-	 * @return returns an {@link ArrayList} of {@link Dia} containing the number
-	 *         of sessions that are supposed to be in each page.
-	 */
-	public static ArrayList<Dia> getListaCerta(int pagina, int datasPorPagina,
-			ArrayList<Dia> dia) {
-		ArrayList<Dia> listaPassar = new ArrayList<Dia>();
+	return listaInverter;
+    }
 
-		for (int i = 0; i < datasPorPagina; i++) {
-			if (pagina == 0) {
-				listaPassar.add(dia.get(i));
-			} else {
-				if (i + (pagina * datasPorPagina) < dia.size()) {
-					listaPassar.add(dia.get(i + (pagina * datasPorPagina)));
-				}
-			}
+    /**
+     * This method is supposed to give the right list for each page.
+     * 
+     * @param pagina
+     *            Integer, the index of the page the user is in.
+     * @param datasPorPagina
+     *            Integer, how many dates in each page.
+     * @param dia
+     *            {@link ArrayList} of {@link Dia} containing all the sessions.
+     * @return returns an {@link ArrayList} of {@link Dia} containing the number
+     *         of sessions that are supposed to be in each page.
+     */
+    public static ArrayList<Dia> getListaCerta(int pagina, int datasPorPagina,
+	    ArrayList<Dia> dia) {
+	ArrayList<Dia> listaPassar = new ArrayList<Dia>();
+
+	for (int i = 0; i < datasPorPagina; i++) {
+	    if (pagina == 0) {
+		listaPassar.add(dia.get(i));
+	    } else {
+		if (i + (pagina * datasPorPagina) < dia.size()) {
+		    listaPassar.add(dia.get(i + (pagina * datasPorPagina)));
 		}
-
-		return listaPassar;
+	    }
 	}
 
-	/**
-	 * This method is to take all the sessions that happened on one specific
-	 * day.
-	 * 
-	 * @param data
-	 *            String, containing the date to search.
-	 * @return returns the a {@link Dia} object containing all sessions on that
-	 *         day.
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
-	 * @throws DataFormatoErradoException
-	 * @throws ListaVaziaException
-	 */
-	public static Dia passarData(String data) throws ClassNotFoundException,
-			SQLException, DataFormatoErradoException, ListaVaziaException {
+	return listaPassar;
+    }
 
-		Dia dia = null;
-		dia = new SessoesEReunioesDao().procuraDia(data);
-		dia.setData(data);
+    /**
+     * This method is to take all the sessions that happened on one specific
+     * day.
+     * 
+     * @param data
+     *            String, containing the date to search.
+     * @return returns the a {@link Dia} object containing all sessions on that
+     *         day.
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     * @throws DataFormatoErradoException
+     * @throws ListaVaziaException
+     */
+    public static Dia passarData(String data) throws ClassNotFoundException,
+	    SQLException, DataFormatoErradoException, ListaVaziaException {
 
-		if (dia.getListaSessoes().size() == 0) {
-			throw new ListaVaziaException();
-		}
+	final int empty = 0;
+	Dia dia = null;
+	dia = new SessoesEReunioesDao().procuraDia(data);
+	dia.setData(data);
 
-		return dia;
+	if (dia.getListaSessoes().size() == empty) {
+	    throw new ListaVaziaException();
 	}
+
+	return dia;
+    }
 }

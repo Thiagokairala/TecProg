@@ -37,6 +37,7 @@ public final class RankingControl {
      */
     public static Ranking gerarRanking(ArrayList<Estatistica> lista)
 	    throws ListaRankingException {
+	final int empty = 0;
 
 	Ranking ranking = new Ranking();
 	try {
@@ -48,14 +49,16 @@ public final class RankingControl {
 
 	    ArrayList<Estatistica> listaRecebida = recebido.get(0);
 
-	    if (listaRecebida.size() == 0) {
+	    if (listaRecebida.size() == empty) {
 		throw new ListaRankingException();
 	    }
 	    ArrayList<Estatistica> listaOrdenada = ordenacao(listaRecebida);
 
+	    final int lastPosition = lista.size() - 1;
+
 	    for (int i = 0; i < TAMANHO_RANKINGS; i++) {
 		melhores.add(lista.get(i));
-		piores.add(lista.get(lista.size() - 1 - i));
+		piores.add(lista.get(lastPosition - i));
 	    }
 
 	    ranking.setMelhores(melhores);
@@ -89,14 +92,16 @@ public final class RankingControl {
 	    ArrayList<Deputados> lista) throws ClassNotFoundException,
 	    SQLException, ListaRankingException, ListaVaziaException {
 
+	final int firstElement = 0;
 	try {
 	    ArrayList<Estatistica> devolver = new ArrayList<Estatistica>();
-	    String nome = EstatisticaControl.arrumarNomePesquisa(lista.get(0));
+	    String nome = EstatisticaControl.arrumarNomePesquisa(lista
+		    .get(firstElement));
 
 	    devolver.add(EstatisticaControl.gerarEstatisticas(nome));
 
-	    int totalSessao = Integer
-		    .parseInt(devolver.get(0).getTotalSessao());
+	    int totalSessao = Integer.parseInt(devolver.get(firstElement)
+		    .getTotalSessao());
 
 	    for (int i = 0; i < lista.size(); i++) {
 		nome = EstatisticaControl.arrumarNomePesquisa(lista.get(i));
@@ -111,7 +116,7 @@ public final class RankingControl {
 		}
 	    }
 	    return devolver;
-	} catch (IndexOutOfBoundsException e2) {
+	} catch (IndexOutOfBoundsException e) {
 	    throw new ListaRankingException();
 	}
     }
@@ -125,6 +130,7 @@ public final class RankingControl {
      */
     public static Ranking passarRankingTop5() throws ClassNotFoundException,
 	    SQLException {
+	final int sizeOfRanking = 5;
 	RankingDao rankingDao = new RankingDao();
 	Ranking ranking = rankingDao.retornaRanking();
 	ArrayList<Estatistica> melhores = new ArrayList<Estatistica>();
@@ -132,10 +138,11 @@ public final class RankingControl {
 
 	ranking.setLista(ordenacao(ranking.getLista()));
 
-	for (int i = 0; i < 5; i++) {
+	final int lastPosition = ranking.getLista().size() - 1;
+
+	for (int i = 0; i < sizeOfRanking; i++) {
 	    melhores.add(ranking.getLista().get(i));
-	    piores.add(ranking.getLista()
-		    .get(ranking.getLista().size() - 1 - i));
+	    piores.add(ranking.getLista().get(lastPosition - i));
 	}
 	ranking.setMelhores(melhores);
 	ranking.setPiores(piores);
