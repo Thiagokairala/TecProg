@@ -161,29 +161,30 @@ public final class RankingControl {
     public static ArrayList<Estatistica> ordenacao(ArrayList<Estatistica> lista) {
 	// Insertion Sort
 
-	int i = 1, j = 1;
+	int insideControler = 1, outSideControler = 1;
 	if (lista.size() > 0) {
-	    while (j < lista.size()) {
-		i = j;
-		while (i > 0) {
-		    int primeiro = Integer.parseInt(lista.get(i - 1)
-			    .getNumeroSessao());
-		    int segundo = Integer.parseInt(lista.get(i)
+	    while (outSideControler < lista.size()) {
+		insideControler = outSideControler;
+		while (insideControler > 0) {
+		    int primeiro = Integer.parseInt(lista.get(
+			    insideControler - 1).getNumeroSessao());
+		    int segundo = Integer.parseInt(lista.get(insideControler)
 			    .getNumeroSessao());
 
 		    if (primeiro < segundo) {
 			Estatistica temp;
 
-			temp = lista.get(i - 1);
+			temp = lista.get(insideControler - 1);
 
-			lista.set(i - 1, lista.get(i));
-			lista.set(i, temp);
-			i--;
+			lista.set(insideControler - 1,
+				lista.get(insideControler));
+			lista.set(insideControler, temp);
+			insideControler--;
 		    } else {
 			break;
 		    }
 		}
-		j++;
+		outSideControler++;
 	    }
 	}
 	return lista;
