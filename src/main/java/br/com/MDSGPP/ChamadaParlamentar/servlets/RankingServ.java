@@ -36,16 +36,18 @@ public class RankingServ extends javax.servlet.http.HttpServlet {
 	    HttpServletResponse response) throws ServletException, IOException {
 	Ranking ranking = null;
 	RequestDispatcher rd = null;
+	final String rankingPage = "/Ranking.jsp";
+	final String erro = "/Erro.jsp";
 
 	try {
 	    ranking = RankingControl.passarRankingTop5();
 	    request.setAttribute("ranking", ranking);
-	    rd = request.getRequestDispatcher("/Ranking.jsp");
+	    rd = request.getRequestDispatcher(rankingPage);
 
 	} catch (ClassNotFoundException e) {
-	    rd = request.getRequestDispatcher("/Erro.jsp");
+	    rd = request.getRequestDispatcher(erro);
 	} catch (SQLException e) {
-	    rd = request.getRequestDispatcher("/Erro.jsp");
+	    rd = request.getRequestDispatcher(erro);
 	}
 
 	rd.forward(request, response);

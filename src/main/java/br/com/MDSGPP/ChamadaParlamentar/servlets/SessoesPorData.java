@@ -40,6 +40,11 @@ public class SessoesPorData extends HttpServlet {
 	    HttpServletResponse response) throws ServletException, IOException {
 	RequestDispatcher rd = null;
 
+	final String showDay = "/MostrarDia.jsp";
+	final String erro = "/Erro.jsp";
+	final String wrongFormat = "/FormatoErrado.jsp";
+	final String dateNotFound = "/DataNaoEncontrada.jsp";
+
 	String data = request.getParameter("datas");
 	if (ExceptionSqlInjection.testeSqlInjection(data)) {
 	    try {
@@ -53,18 +58,18 @@ public class SessoesPorData extends HttpServlet {
 		}
 
 		request.setAttribute("dia", dia);
-		rd = request.getRequestDispatcher("/MostrarDia.jsp");
+		rd = request.getRequestDispatcher(showDay);
 
 	    } catch (ClassNotFoundException e) {
-		rd = request.getRequestDispatcher("/Erro.jsp");
+		rd = request.getRequestDispatcher(erro);
 	    } catch (SQLException e) {
-		rd = request.getRequestDispatcher("/Erro.jsp");
+		rd = request.getRequestDispatcher(erro);
 	    } catch (DataFormatoErradoException e) {
-		rd = request.getRequestDispatcher("/FormatoErrado.jsp");
+		rd = request.getRequestDispatcher(wrongFormat);
 	    } catch (DataNaoEncontradaException e) {
-		rd = request.getRequestDispatcher("/DataNaoEncontrada.jsp");
+		rd = request.getRequestDispatcher(dateNotFound);
 	    } catch (ListaVaziaException e) {
-		rd = request.getRequestDispatcher("/DataNaoEncontrada.jsp");
+		rd = request.getRequestDispatcher(dateNotFound);
 	    }
 	} else {
 	    rd = request.getRequestDispatcher("SqlDetectado.jsp");

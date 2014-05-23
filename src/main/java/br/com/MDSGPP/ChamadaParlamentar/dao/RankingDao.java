@@ -51,15 +51,22 @@ public class RankingDao extends ConnectionFactory {
      * @throws ServiceException
      */
     public void adicionarRankingNaTable(Ranking ranking) throws SQLException {
+	final int nomeParlamentar = 1;
+	final int porcentagem = 2;
+	final int numeroSessoes = 3;
+
 	String sql = "insert into ranking(nomeParlamentar, porcentagem, numeroSessoes)values (?, ?, ?)";
 	PreparedStatement stmt = ConnectionFactory.getConexao()
 		.prepareStatement(sql);
 
 	for (int i = 0; i < ranking.getLista().size(); i++) {
 	    try {
-		stmt.setString(1, ranking.getLista().get(i).getNome());
-		stmt.setString(2, ranking.getLista().get(i).getPorcentagem());
-		stmt.setString(3, ranking.getLista().get(i).getNumeroSessao());
+		stmt.setString(nomeParlamentar, ranking.getLista().get(i)
+			.getNome());
+		stmt.setString(porcentagem, ranking.getLista().get(i)
+			.getPorcentagem());
+		stmt.setString(numeroSessoes, ranking.getLista().get(i)
+			.getNumeroSessao());
 
 		stmt.execute();
 	    } catch (MySQLIntegrityConstraintViolationException e) {
@@ -85,6 +92,10 @@ public class RankingDao extends ConnectionFactory {
      */
     public Ranking retornaRanking() throws SQLException {
 	Ranking ranking = new Ranking();
+	final String colunaNomeParlamentar = "nomeParlamentar";
+	final String colunaPorcentagem = "porcentagem";
+	final String colunaNumeroSessoes = "numeroSessoes";
+	
 	ArrayList<Estatistica> removidos = new ArrayList<Estatistica>();
 	ArrayList<Estatistica> lista = new ArrayList<Estatistica>();
 
@@ -96,12 +107,12 @@ public class RankingDao extends ConnectionFactory {
 
 	while (rs.next()) {
 	    Estatistica estatistica = new Estatistica();
-	    estatistica.setNome(rs.getString("nomeParlamentar"));
-	    if (rs.getString("porcentagem").equalsIgnoreCase("semDados")) {
+	    estatistica.setNome(rs.getString(colunaNomeParlamentar));
+	    if (rs.getString(colunaPorcentagem).equalsIgnoreCase("semDados")) {
 		removidos.add(estatistica);
 	    } else {
-		estatistica.setPorcentagem(rs.getString("porcentagem"));
-		estatistica.setNumeroSessao(rs.getString("numeroSessoes"));
+		estatistica.setPorcentagem(rs.getString(colunaPorcentagem));
+		estatistica.setNumeroSessao(rs.getString(colunaNumeroSessoes));
 		lista.add(estatistica);
 	    }
 	}
@@ -110,5 +121,4 @@ public class RankingDao extends ConnectionFactory {
 	ranking.setRemovidos(removidos);
 	return ranking;
     }
-
 }

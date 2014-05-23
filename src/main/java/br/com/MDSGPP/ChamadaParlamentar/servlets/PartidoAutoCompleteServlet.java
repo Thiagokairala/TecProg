@@ -35,18 +35,21 @@ public class PartidoAutoCompleteServlet extends javax.servlet.http.HttpServlet {
 	    HttpServletResponse response) throws ServletException, IOException {
 	RequestDispatcher rd = null;
 
+	final String acompanharPartido = "AcompanharPartido.jsp";
+	final String erro = "Erro.jsp";
+
 	try {
 	    ArrayList<ArrayList<String>> listaAutoComplete = PartidoControl
 		    .passarListaPartidos();
 
 	    request.setAttribute("lista", listaAutoComplete);
 
-	    rd = request.getRequestDispatcher("AcompanharPartido.jsp");
+	    rd = request.getRequestDispatcher(acompanharPartido);
 
 	} catch (ClassNotFoundException e) {
-	    rd = request.getRequestDispatcher("Erro.jsp");
+	    rd = request.getRequestDispatcher(erro);
 	} catch (SQLException e) {
-	    rd = request.getRequestDispatcher("Erro.jsp");
+	    rd = request.getRequestDispatcher(erro);
 	}
 
 	rd.forward(request, response);
