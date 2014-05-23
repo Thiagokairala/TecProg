@@ -19,7 +19,8 @@
 package br.gov.camara.www.SitCamaraWS.SessoesReunioes;
 
 public class ListarDiscursosPlenarioResponseListarDiscursosPlenarioResult  implements java.io.Serializable, org.apache.axis.encoding.AnyContentType, org.apache.axis.encoding.MixedContentType {
-    private org.apache.axis.message.MessageElement [] _any;
+	private final static int zero = 0;
+	private org.apache.axis.message.MessageElement [] _any;
 
     public ListarDiscursosPlenarioResponseListarDiscursosPlenarioResult() {
     }
@@ -71,12 +72,12 @@ public class ListarDiscursosPlenarioResponseListarDiscursosPlenarioResult  imple
     private boolean __hashCodeCalc = false;
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
-            return 0;
+            return zero;
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (get_any() != null) {
-            for (int i=0;
+            for (int i=zero;
                  i<java.lang.reflect.Array.getLength(get_any());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(get_any(), i);
