@@ -24,6 +24,9 @@ import br.com.MDSGPP.ChamadaParlamentar.model.Partidos;
 import br.com.MDSGPP.ChamadaParlamentar.util.LimparLista;
 
 public final class PartidoControl {
+	
+	private final static int zero = 0;
+	private final static int um = 1;
 	/**
 	 * Method that bridges the gap between the Dao and Model about the parties.
 	 * 
@@ -54,9 +57,9 @@ public final class PartidoControl {
 
 		ArrayList<ArrayList<String>> listaComDados = passarListaPartidos();
 
-		for (int i = 0; i < listaComDados.size(); i++) {
-			if (listaComDados.get(i).get(0).equalsIgnoreCase(partido)
-					|| listaComDados.get(i).get(1).equalsIgnoreCase(partido)) {
+		for (int i = zero; i < listaComDados.size(); i++) {
+			if (listaComDados.get(i).get(zero).equalsIgnoreCase(partido)
+					|| listaComDados.get(i).get(um).equalsIgnoreCase(partido)) {
 				return listaComDados.get(i);
 			}
 		}
@@ -84,15 +87,15 @@ public final class PartidoControl {
 		ArrayList<Deputados> deputadosDoPartido = new ArrayList<Deputados>();
 
 		if (nomePartidoCerto != null) {
-			for (int i = 0; i < todosDeputados.size(); i++) {
-				if (nomePartidoCerto.get(0).equalsIgnoreCase(
+			for (int i = zero; i < todosDeputados.size(); i++) {
+				if (nomePartidoCerto.get(zero).equalsIgnoreCase(
 						todosDeputados.get(i).getPartido())) {
 					deputadosDoPartido.add(todosDeputados.get(i));
 				}
 			}
 
-			partido.setSigla(nomePartidoCerto.get(0));
-			partido.setNomePartido(nomePartidoCerto.get(1));
+			partido.setSigla(nomePartidoCerto.get(zero));
+			partido.setNomePartido(nomePartidoCerto.get(um));
 			partido.setDeputadosDoPartido(deputadosDoPartido);
 		}
 
@@ -120,7 +123,7 @@ public final class PartidoControl {
 		ArrayList<Estatistica> estatisticas = new ArrayList<Estatistica>();
 
 		try {
-			for (int i = 0; i < partido.getDeputadosDoPartido().size(); i++) {
+			for (int i = zero; i < partido.getDeputadosDoPartido().size(); i++) {
 				Estatistica estatistica = new Estatistica();
 				try {
 					estatistica = EstatisticaControl
@@ -164,8 +167,8 @@ public final class PartidoControl {
 		ArrayList<ArrayList<Estatistica>> listaRecebida = LimparLista
 				.limparLista(partido.getEstatisticaDosDeputados());
 
-		partido.setEstatisticaDosDeputados(listaRecebida.get(0));
-		partido.setDeputadosSemDados(listaRecebida.get(1));
+		partido.setEstatisticaDosDeputados(listaRecebida.get(zero));
+		partido.setDeputadosSemDados(listaRecebida.get(um));
 
 		return partido;
 	}
