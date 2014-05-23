@@ -20,7 +20,8 @@ import java.util.ArrayList;
 import br.com.MDSGPP.ChamadaParlamentar.model.Partidos;
 
 public class PartidoDao extends ConnectionFactory {
-
+	
+	private final static int zero = 0;
 	private final int UM = 1;
 	private final int DOIS = 2;
 
@@ -42,7 +43,7 @@ public class PartidoDao extends ConnectionFactory {
 
 		PreparedStatement stmt = getConexao().prepareStatement(sql);
 
-		for (int i = 0; i < lista.size(); i++) {
+		for (int i = zero; i < lista.size(); i++) {
 			stmt.setString(UM, lista.get(i).getSigla());
 			stmt.setString(DOIS, lista.get(i).getNomePartido());
 
