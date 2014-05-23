@@ -72,7 +72,7 @@ public class SessoesPorData extends HttpServlet {
 		rd = request.getRequestDispatcher(dateNotFound);
 	    }
 	} else {
-	    rd = request.getRequestDispatcher("SqlDetectado.jsp");
+	    rd = request.getRequestDispatcher("sqlDetectado.jsp");
 	}
 
 	rd.forward(request, response);

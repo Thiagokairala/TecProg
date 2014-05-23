@@ -7,13 +7,7 @@
 
 /**
  * Class: DeputiesSoapStub
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
+ *
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -26,6 +20,7 @@ package br.gov.camara.www.SitCamaraWS.Deputados;
 
 public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 		br.gov.camara.www.SitCamaraWS.Deputados.DeputadosSoap {
+	
 	private java.util.Vector cachedSerClasses = new java.util.Vector();
 	private java.util.Vector cachedSerQNames = new java.util.Vector();
 	private java.util.Vector cachedSerFactories = new java.util.Vector();
