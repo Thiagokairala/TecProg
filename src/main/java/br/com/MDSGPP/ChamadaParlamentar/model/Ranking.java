@@ -1,13 +1,6 @@
 /**
  * Class: UpdateDataBase
  * 
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @authr Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
  * Date: march 26 2014.
  * 
  *         Is class is the class that will hold all the attributes of Ranking.
