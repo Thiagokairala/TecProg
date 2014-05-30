@@ -7,13 +7,7 @@
 
 /**
  * Class: ListPresenceParliamentary
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
+ * 
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -25,6 +19,7 @@
 package br.gov.camara.www.SitCamaraWS.SessoesReunioes;
 
 public class ListarPresencasParlamentar  implements java.io.Serializable {
+	private final static int zero = 0;
     private java.lang.String dataIni;
 
     private java.lang.String dataFim;
@@ -131,7 +126,7 @@ public class ListarPresencasParlamentar  implements java.io.Serializable {
     private boolean __hashCodeCalc = false;
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
-            return 0;
+            return zero;
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
@@ -158,21 +153,21 @@ public class ListarPresencasParlamentar  implements java.io.Serializable {
         elemField.setFieldName("dataIni");
         elemField.setXmlName(new javax.xml.namespace.QName("http://www.camara.gov.br/SitCamaraWS/SessoesReunioes", "dataIni"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
+        elemField.setMinOccurs(zero);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("dataFim");
         elemField.setXmlName(new javax.xml.namespace.QName("http://www.camara.gov.br/SitCamaraWS/SessoesReunioes", "dataFim"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
+        elemField.setMinOccurs(zero);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("numMatriculaParlamentar");
         elemField.setXmlName(new javax.xml.namespace.QName("http://www.camara.gov.br/SitCamaraWS/SessoesReunioes", "numMatriculaParlamentar"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
+        elemField.setMinOccurs(zero);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

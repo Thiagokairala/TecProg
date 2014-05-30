@@ -7,13 +7,7 @@
 
 /**
  * Class: ObtainDetailsDeputyResponseObtainDeputyResult
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
+ *
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -27,6 +21,7 @@ package br.gov.camara.www.SitCamaraWS.Deputados;
 public class ObterDetalhesDeputadoResponseObterDetalhesDeputadoResult implements
 		java.io.Serializable, org.apache.axis.encoding.AnyContentType,
 		org.apache.axis.encoding.MixedContentType {
+	private final static int zero = 0;
 	private org.apache.axis.message.MessageElement[] _any;
 
 	public ObterDetalhesDeputadoResponseObterDetalhesDeputadoResult() {
@@ -82,12 +77,12 @@ public class ObterDetalhesDeputadoResponseObterDetalhesDeputadoResult implements
 
 	public synchronized int hashCode() {
 		if (__hashCodeCalc) {
-			return 0;
+			return zero;
 		}
 		__hashCodeCalc = true;
 		int _hashCode = 1;
 		if (get_any() != null) {
-			for (int i = 0; i < java.lang.reflect.Array.getLength(get_any()); i++) {
+			for (int i = zero; i < java.lang.reflect.Array.getLength(get_any()); i++) {
 				java.lang.Object obj = java.lang.reflect.Array
 						.get(get_any(), i);
 				if (obj != null && !obj.getClass().isArray()) {

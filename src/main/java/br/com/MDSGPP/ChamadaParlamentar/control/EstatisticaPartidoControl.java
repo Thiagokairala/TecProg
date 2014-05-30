@@ -1,14 +1,4 @@
 /**
- * Class: StatisticPoliticalPartyControl
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
- * Date: march 26 2014.
- * 
  * License: This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -74,6 +64,8 @@ public final class EstatisticaPartidoControl {
 	public static String formatarNumeroDouble(double numero) {
 		NumberFormat formatardouble = new DecimalFormat("0.00");
 
-		return formatardouble.format(numero);
+		String formatoFinal = formatardouble.format(numero);
+		
+		return formatoFinal;
 	}
 }

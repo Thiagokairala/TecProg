@@ -1,12 +1,6 @@
 /**
  * Class: PoliticalPartyDao
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
+ * 
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -26,7 +20,8 @@ import java.util.ArrayList;
 import br.com.MDSGPP.ChamadaParlamentar.model.Partidos;
 
 public class PartidoDao extends ConnectionFactory {
-
+	
+	private final static int zero = 0;
 	private final int UM = 1;
 	private final int DOIS = 2;
 
@@ -48,7 +43,7 @@ public class PartidoDao extends ConnectionFactory {
 
 		PreparedStatement stmt = getConexao().prepareStatement(sql);
 
-		for (int i = 0; i < lista.size(); i++) {
+		for (int i = zero; i < lista.size(); i++) {
 			stmt.setString(UM, lista.get(i).getSigla());
 			stmt.setString(DOIS, lista.get(i).getNomePartido());
 

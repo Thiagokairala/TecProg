@@ -7,13 +7,7 @@
 
 /**
  * Class: ObtainIntegerContentSpeechesPlenary
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
+ * 
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -25,6 +19,7 @@
 package br.gov.camara.www.SitCamaraWS.SessoesReunioes;
 
 public class ObterInteiroTeorDiscursosPlenario  implements java.io.Serializable {
+	private final static int zero = 0;
     private java.lang.String codSessao;
 
     private java.lang.String numOrador;
@@ -158,7 +153,7 @@ public class ObterInteiroTeorDiscursosPlenario  implements java.io.Serializable 
     private boolean __hashCodeCalc = false;
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
-            return 0;
+            return zero;
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
@@ -188,28 +183,28 @@ public class ObterInteiroTeorDiscursosPlenario  implements java.io.Serializable 
         elemField.setFieldName("codSessao");
         elemField.setXmlName(new javax.xml.namespace.QName("http://www.camara.gov.br/SitCamaraWS/SessoesReunioes", "codSessao"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
+        elemField.setMinOccurs(zero);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("numOrador");
         elemField.setXmlName(new javax.xml.namespace.QName("http://www.camara.gov.br/SitCamaraWS/SessoesReunioes", "numOrador"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
+        elemField.setMinOccurs(zero);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("numQuarto");
         elemField.setXmlName(new javax.xml.namespace.QName("http://www.camara.gov.br/SitCamaraWS/SessoesReunioes", "numQuarto"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
+        elemField.setMinOccurs(zero);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("numInsercao");
         elemField.setXmlName(new javax.xml.namespace.QName("http://www.camara.gov.br/SitCamaraWS/SessoesReunioes", "numInsercao"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
+        elemField.setMinOccurs(zero);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

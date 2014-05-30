@@ -7,13 +7,7 @@
 
 /**
  * Class: ObtainPartiesCDResponse
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
+ *
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -25,6 +19,7 @@
 package br.gov.camara.www.SitCamaraWS.Deputados;
 
 public class ObterPartidosCDResponse implements java.io.Serializable {
+	private final static int zero = 0;
 	private br.gov.camara.www.SitCamaraWS.Deputados.ObterPartidosCDResponseObterPartidosCDResult obterPartidosCDResult;
 
 	public ObterPartidosCDResponse() {
@@ -80,7 +75,7 @@ public class ObterPartidosCDResponse implements java.io.Serializable {
 
 	public synchronized int hashCode() {
 		if (__hashCodeCalc) {
-			return 0;
+			return zero;
 		}
 		__hashCodeCalc = true;
 		int _hashCode = 1;
@@ -107,7 +102,7 @@ public class ObterPartidosCDResponse implements java.io.Serializable {
 		elemField.setXmlType(new javax.xml.namespace.QName(
 				"http://www.camara.gov.br/SitCamaraWS/Deputados",
 				">>ObterPartidosCDResponse>ObterPartidosCDResult"));
-		elemField.setMinOccurs(0);
+		elemField.setMinOccurs(zero);
 		elemField.setNillable(false);
 		typeDesc.addFieldDesc(elemField);
 	}

@@ -1,12 +1,6 @@
 /**
  * Class: DeputyControl
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
+ *
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -25,7 +19,8 @@ import br.com.MDSGPP.ChamadaParlamentar.dao.DeputadoDao;
 import br.com.MDSGPP.ChamadaParlamentar.model.Deputados;
 
 public final class DeputadosControl {
-
+	
+	private final static int zero = 0;
 	/**
 	 * Method creates a .
 	 * 
@@ -60,7 +55,7 @@ public final class DeputadosControl {
 		DeputadoDao deputadoDao = new DeputadoDao();
 		ArrayList<Deputados> lista = deputadoDao.getDeputados();
 
-		for (int i = 0; i < lista.size(); i++) {
+		for (int i = zero; i < lista.size(); i++) {
 			if ((lista.get(i).getNomeCivilDoParlamentar()
 					.equalsIgnoreCase(nome))
 					|| lista.get(i).getNomeDeTratamentoDoParlamentar()

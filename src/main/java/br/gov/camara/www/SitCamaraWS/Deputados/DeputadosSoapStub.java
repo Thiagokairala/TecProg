@@ -7,13 +7,7 @@
 
 /**
  * Class: DeputiesSoapStub
- * @author Thiago Ramires Kairala
- * @author Thabata Helen Macedo Granja
- * @author Eduardo Brasil Martins
- * @author João Guilherme Santana Araruna
- * @author Nilton Cesar Campos Araruna
- * @author Rafael Fazzolino Pinto Barbosa
- * @author Bruno Contessotto Bragança Pinheiro
+ *
  * Date: march 26 2014.
  * 
  * License: This program is free software: you can redistribute it and/or modify
@@ -26,6 +20,11 @@ package br.gov.camara.www.SitCamaraWS.Deputados;
 
 public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 		br.gov.camara.www.SitCamaraWS.Deputados.DeputadosSoap {
+	private final static int zero = 0;
+	private final static int um = 1;
+	private final static int dois = 2;
+	private final static int tres = 3;
+	private final static int quatro = 4;
 	private java.util.Vector cachedSerClasses = new java.util.Vector();
 	private java.util.Vector cachedSerQNames = new java.util.Vector();
 	private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -52,7 +51,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 				"ObterDeputadosResult"));
 		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
 		oper.setUse(org.apache.axis.constants.Use.LITERAL);
-		_operations[0] = oper;
+		_operations[zero] = oper;
 
 		oper = new org.apache.axis.description.OperationDesc();
 		oper.setName("ObterPartidosCD");
@@ -65,7 +64,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 				"ObterPartidosCDResult"));
 		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
 		oper.setUse(org.apache.axis.constants.Use.LITERAL);
-		_operations[1] = oper;
+		_operations[um] = oper;
 
 		oper = new org.apache.axis.description.OperationDesc();
 		oper.setName("ObterPartidosBlocoCD");
@@ -98,7 +97,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 				"ObterPartidosBlocoCDResult"));
 		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
 		oper.setUse(org.apache.axis.constants.Use.LITERAL);
-		_operations[2] = oper;
+		_operations[dois] = oper;
 
 		oper = new org.apache.axis.description.OperationDesc();
 		oper.setName("ObterDetalhesDeputado");
@@ -131,7 +130,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 				"ObterDetalhesDeputadoResult"));
 		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
 		oper.setUse(org.apache.axis.constants.Use.LITERAL);
-		_operations[3] = oper;
+		_operations[tres] = oper;
 
 		oper = new org.apache.axis.description.OperationDesc();
 		oper.setName("ObterLideresBancadas");
@@ -144,7 +143,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 				"ObterLideresBancadasResult"));
 		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
 		oper.setUse(org.apache.axis.constants.Use.LITERAL);
-		_operations[4] = oper;
+		_operations[quatro] = oper;
 
 	}
 
@@ -335,7 +334,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 				if (firstCall()) {
 					// must set encoding style before registering serializers
 					_call.setEncodingStyle(null);
-					for (int i = 0; i < cachedSerFactories.size(); ++i) {
+					for (int i = zero; i < cachedSerFactories.size(); ++i) {
 						java.lang.Class cls = (java.lang.Class) cachedSerClasses
 								.get(i);
 						javax.xml.namespace.QName qName = (javax.xml.namespace.QName) cachedSerQNames
@@ -370,7 +369,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 			throw new org.apache.axis.NoEndPointException();
 		}
 		org.apache.axis.client.Call _call = createCall();
-		_call.setOperation(_operations[0]);
+		_call.setOperation(_operations[zero]);
 		_call.setUseSOAPAction(true);
 		_call.setSOAPActionURI("http://www.camara.gov.br/SitCamaraWS/Deputados/ObterDeputados");
 		_call.setEncodingStyle(null);
@@ -412,7 +411,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 			throw new org.apache.axis.NoEndPointException();
 		}
 		org.apache.axis.client.Call _call = createCall();
-		_call.setOperation(_operations[1]);
+		_call.setOperation(_operations[um]);
 		_call.setUseSOAPAction(true);
 		_call.setSOAPActionURI("http://www.camara.gov.br/SitCamaraWS/Deputados/ObterPartidosCD");
 		_call.setEncodingStyle(null);
@@ -455,7 +454,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 			throw new org.apache.axis.NoEndPointException();
 		}
 		org.apache.axis.client.Call _call = createCall();
-		_call.setOperation(_operations[2]);
+		_call.setOperation(_operations[dois]);
 		_call.setUseSOAPAction(true);
 		_call.setSOAPActionURI("http://www.camara.gov.br/SitCamaraWS/Deputados/ObterPartidosBlocoCD");
 		_call.setEncodingStyle(null);
@@ -499,7 +498,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 			throw new org.apache.axis.NoEndPointException();
 		}
 		org.apache.axis.client.Call _call = createCall();
-		_call.setOperation(_operations[3]);
+		_call.setOperation(_operations[tres]);
 		_call.setUseSOAPAction(true);
 		_call.setSOAPActionURI("http://www.camara.gov.br/SitCamaraWS/Deputados/ObterDetalhesDeputado");
 		_call.setEncodingStyle(null);
@@ -542,7 +541,7 @@ public class DeputadosSoapStub extends org.apache.axis.client.Stub implements
 			throw new org.apache.axis.NoEndPointException();
 		}
 		org.apache.axis.client.Call _call = createCall();
-		_call.setOperation(_operations[4]);
+		_call.setOperation(_operations[quatro]);
 		_call.setUseSOAPAction(true);
 		_call.setSOAPActionURI("http://www.camara.gov.br/SitCamaraWS/Deputados/ObterLideresBancadas");
 		_call.setEncodingStyle(null);
