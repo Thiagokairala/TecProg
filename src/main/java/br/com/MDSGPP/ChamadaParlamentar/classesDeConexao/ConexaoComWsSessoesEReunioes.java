@@ -122,55 +122,8 @@ public class ConexaoComWsSessoesEReunioes {
 
 		lista = conexaoDeputado.getMatriculaDeputados();
 
-		for (int i = 0; i < lista.size(); i++) {
-			double porcentagem = (((double) (i) / (double) lista.size()) * 100.0);
+		foi = getDateFromWs(lista, foi, data);
 
-			System.out.println(i + "- " + porcentagem + "%");
-			Calendar hoje = new GregorianCalendar();
-
-			SimpleDateFormat df = new SimpleDateFormat();
-			df.applyPattern("dd/MM/yyyy");
-
-			ListarPresencasParlamentarResponseListarPresencasParlamentarResult sessao;
-			try {
-				sessao = ConexaoComWsSessoesEReunioes.receberElementPresenca(
-						ConexaoComWsSessoesEReunioes.obterConexao(), data,
-						df.format(hoje.getTime()),
-						Integer.toString(lista.get(i)));
-
-				NodeList dias = sessao.get_any()[0].getElementsByTagName("dia");
-
-				for (int j = 0; j < dias.getLength(); j++) {
-
-					MessageElement diasTemp = (MessageElement) dias.item(j);
-					NodeList descricaoTemp = diasTemp
-							.getElementsByTagName("descricao");
-					NodeList presencaTemp = diasTemp
-							.getElementsByTagName("frequencia");
-
-					for (int k = 0; k < descricaoTemp.getLength(); k++) {
-						MessageElement descricaoText = (MessageElement) descricaoTemp
-								.item(k);
-						NodeList nomeTemp = sessao.get_any()[0]
-								.getElementsByTagName("nomeParlamentar");
-						MessageElement nomeText = (MessageElement) nomeTemp
-								.item(0);
-						MessageElement presencaText = (MessageElement) presencaTemp
-								.item(k);
-
-						if (presencaText.getFirstChild().getNodeValue()
-								.equals("Presença")) {
-
-							foi.add(descricaoText.getFirstChild()
-									.getNodeValue());
-							foi.add(nomeText.getFirstChild().getNodeValue());
-						}
-					}
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
 		return foi;
 	}
 
@@ -226,4 +179,80 @@ public class ConexaoComWsSessoesEReunioes {
 		}
 		return passar;
 	}
+
+	private static ArrayList<String> getActualTextForSession(
+			ArrayList<String> foi,
+			ListarPresencasParlamentarResponseListarPresencasParlamentarResult sessao,
+			NodeList descricaoTemp, NodeList presencaTemp, int k) {
+		MessageElement descricaoText = (MessageElement) descricaoTemp.item(k);
+		NodeList nomeTemp = sessao.get_any()[0]
+				.getElementsByTagName("nomeParlamentar");
+		MessageElement nomeText = (MessageElement) nomeTemp.item(0);
+		MessageElement presencaText = (MessageElement) presencaTemp.item(k);
+
+		if (presencaText.getFirstChild().getNodeValue().equals("Presença")) {
+
+			foi.add(descricaoText.getFirstChild().getNodeValue());
+			foi.add(nomeText.getFirstChild().getNodeValue());
+		}
+		return foi;
+	}
+
+	private static void showProgress(final int placeOnArray, final int total) {
+		double porcentagem = (((double) (placeOnArray) / (double) total) * 100.0);
+
+		System.out.println(placeOnArray + "- " + porcentagem + "%");
+	}
+
+	private static ArrayList<String> getNoListsOfDias(
+			ArrayList<String> foi,
+			NodeList dias,
+			ListarPresencasParlamentarResponseListarPresencasParlamentarResult sessao) {
+		for (int j = 0; j < dias.getLength(); j++) {
+
+			MessageElement diasTemp = (MessageElement) dias.item(j);
+			NodeList descricaoTemp = diasTemp.getElementsByTagName("descricao");
+			NodeList presencaTemp = diasTemp.getElementsByTagName("frequencia");
+
+			for (int k = 0; k < descricaoTemp.getLength(); k++) {
+				foi = getActualTextForSession(foi, sessao, descricaoTemp,
+						presencaTemp, k);
+
+			}
+		}
+		return foi;
+	}
+
+	private static ArrayList<String> getDateFromWs(ArrayList<Integer> lista,
+			ArrayList<String> foi, String data) {
+		int size = lista.size();
+		for (int i = 0; i < size; i++) {
+			showProgress(i, size);
+
+			ListarPresencasParlamentarResponseListarPresencasParlamentarResult sessao;
+			try {
+
+				Calendar hoje = new GregorianCalendar();
+
+				SimpleDateFormat df = new SimpleDateFormat();
+				df.applyPattern("dd/MM/yyyy");
+
+				SessoesReunioesSoapStub service = ConexaoComWsSessoesEReunioes
+						.obterConexao();
+
+				sessao = ConexaoComWsSessoesEReunioes.receberElementPresenca(
+						service, data, df.format(hoje.getTime()),
+						Integer.toString(lista.get(i)));
+
+				NodeList dias = sessao.get_any()[0].getElementsByTagName("dia");
+
+				foi = getNoListsOfDias(foi, dias, sessao);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return foi;
+	}
+
 }
