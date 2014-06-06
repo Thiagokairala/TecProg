@@ -159,7 +159,6 @@ public final class RankingControl {
 	 *         sorted list.
 	 */
 	public static ArrayList<Estatistica> ordenacao(ArrayList<Estatistica> lista) {
-		// Insertion Sort
 
 		if (lista.size() > 1) {
 			int size = lista.size();
@@ -202,18 +201,15 @@ public final class RankingControl {
 
 				for (int i = 0; i < total; i++) {
 					if (contFirstArray == left.size()) {
-						for (int j = i; j < total; j++) {
-							arrayToReturn.add(right.get(contSecondArray));
+						arrayToReturn = dumpRestOfTheList(arrayToReturn, right,
+								contSecondArray, i, total);
 
-							contSecondArray++;
-						}
 						return arrayToReturn;
 					} else {
 						if (contSecondArray == right.size()) {
-							for (int j = i; j < total; j++) {
-								arrayToReturn.add(left.get(contFirstArray));
-								contFirstArray++;
-							}
+							arrayToReturn = dumpRestOfTheList(arrayToReturn,
+									left, contFirstArray, i, total);
+
 							return arrayToReturn;
 
 						} else {
@@ -234,6 +230,17 @@ public final class RankingControl {
 			}
 		}
 
+	}
+
+	private static ArrayList<Estatistica> dumpRestOfTheList(
+			ArrayList<Estatistica> arrayToReturn, ArrayList<Estatistica> right,
+			int contSecondArray, int i, int total) {
+		for (int j = i; j < total; j++) {
+			arrayToReturn.add(right.get(contSecondArray));
+
+			contSecondArray++;
+		}
+		return arrayToReturn;
 	}
 
 	private static boolean isRight(ArrayList<Estatistica> left,

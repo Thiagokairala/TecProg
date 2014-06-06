@@ -30,12 +30,10 @@ public class TesteRankingControl {
 	}
 
 	@Test
-	public void testGerarRanking()
-			throws ClassNotFoundException, SQLException, ListaRankingException, ListaVaziaException {
-		Ranking ranking = RankingControl.gerarRanking
-				(RankingControl.gerarListaEstatistica
-						(new DeputadoDao().getDeputados()));
-
+	public void testGerarRanking() throws ClassNotFoundException, SQLException,
+			ListaRankingException, ListaVaziaException {
+		Ranking ranking = RankingControl.gerarRanking(RankingControl
+				.gerarListaEstatistica(new DeputadoDao().getDeputados()));
 
 		assertNotNull(ranking.getLista());
 		assertNotNull(ranking.getMelhores());
@@ -43,29 +41,35 @@ public class TesteRankingControl {
 		assertNotNull(ranking.getRemovidos());
 	}
 
-	@Test(expected=ListaRankingException.class)
-	public void testGerarRankingListaRankingException() throws ListaRankingException{
+	@Test(expected = ListaRankingException.class)
+	public void testGerarRankingListaRankingException()
+			throws ListaRankingException {
 		ArrayList<Estatistica> teste = new ArrayList<Estatistica>();
 		Ranking ranking2 = RankingControl.gerarRanking(teste);
 	}
 
-	@Test(expected=ListaRankingException.class)
-	public void testGerarRankingListaComParametroNull() throws ListaRankingException {
+	@Test(expected = ListaRankingException.class)
+	public void testGerarRankingListaComParametroNull()
+			throws ListaRankingException {
 
 		Ranking ranking3 = RankingControl.gerarRanking(null);
 	}
 
-
 	@Test
-	public void testGerarListaEstatistica() throws ClassNotFoundException, SQLException, ListaRankingException, ListaVaziaException {
-		ArrayList<Estatistica> lista1 = RankingControl.gerarListaEstatistica(new DeputadoDao().getDeputados());
+	public void testGerarListaEstatistica() throws ClassNotFoundException,
+			SQLException, ListaRankingException, ListaVaziaException {
+		ArrayList<Estatistica> lista1 = RankingControl
+				.gerarListaEstatistica(new DeputadoDao().getDeputados());
 		assertNotNull(lista1);
 	}
 
-	@Test(expected=ListaRankingException.class)
-	public void testGerarListaEstatisticaException() throws ClassNotFoundException, SQLException, ListaRankingException, ListaVaziaException {
+	@Test(expected = ListaRankingException.class)
+	public void testGerarListaEstatisticaException()
+			throws ClassNotFoundException, SQLException, ListaRankingException,
+			ListaVaziaException {
 		ArrayList<Deputados> listaParaParametro = new ArrayList<Deputados>();
-		ArrayList<Estatistica> lista2 = RankingControl.gerarListaEstatistica(listaParaParametro);
+		ArrayList<Estatistica> lista2 = RankingControl
+				.gerarListaEstatistica(listaParaParametro);
 	}
 
 	@Test
@@ -84,17 +88,80 @@ public class TesteRankingControl {
 		lista.add(terceiro);
 		lista = RankingControl.ordenacao(lista);
 
-		for(int i=0; i < lista.size() -1; i++)
-		{
-			assertTrue(Integer.parseInt(lista.get(i).getNumeroSessao()) > Integer.parseInt(lista.get(i+1).getNumeroSessao()));
+		for (int i = 0; i < lista.size() - 1; i++) {
+			assertTrue(Integer.parseInt(lista.get(i).getNumeroSessao()) > Integer
+					.parseInt(lista.get(i + 1).getNumeroSessao()));
 		}
+	}
+
+	@Test
+	public void testMergeFirstFull() {
+		ArrayList<Estatistica> firstList = new ArrayList<Estatistica>();
+		ArrayList<Estatistica> secondList = new ArrayList<Estatistica>();
+
+		for (int i = 10; i > 0; i--) {
+			Estatistica estatistica = new Estatistica();
+			estatistica.setNumeroSessao(Integer.toString(i));
+			firstList.add(estatistica);
+		}
+
+		ArrayList<Estatistica> listToTest = RankingControl.merge(firstList,
+				secondList);
+
+		assertNotNull(listToTest);
+	}
+
+	@Test
+	public void testMergeSecondFull() {
+		ArrayList<Estatistica> firstList = new ArrayList<Estatistica>();
+		ArrayList<Estatistica> secondList = new ArrayList<Estatistica>();
+
+		for (int i = 10; i > 0; i--) {
+			Estatistica estatistica = new Estatistica();
+			estatistica.setNumeroSessao(Integer.toString(i));
+			secondList.add(estatistica);
+		}
+
+		ArrayList<Estatistica> listToTest = RankingControl.merge(firstList,
+				secondList);
+
+		assertNotNull(listToTest);
+	}
+
+	@Test
+	public void testMergeBothFull() {
+		ArrayList<Estatistica> firstList = new ArrayList<Estatistica>();
+		ArrayList<Estatistica> secondList = new ArrayList<Estatistica>();
+
+		for (int i = 10; i > 0; i--) {
+			Estatistica estatistica = new Estatistica();
+			estatistica.setNumeroSessao(Integer.toString(i));
+			firstList.add(estatistica);
+		}
+
+		for (int i = 20; i < 30; i++) {
+			Estatistica estatistica = new Estatistica();
+			estatistica.setNumeroSessao(Integer.toString(i));
+			secondList.add(estatistica);
+		}
+
+		ArrayList<Estatistica> listToTest = RankingControl.merge(firstList,
+				secondList);
+
+		for (int i = 1; i < listToTest.size(); i++) {
+			int first = Integer.parseInt(listToTest.get(i - 1)
+					.getNumeroSessao());
+			int second = Integer.parseInt(listToTest.get(i).getNumeroSessao());
+			System.out.println(first);
+		}
+
 	}
 
 	@Test
 	public void testOrdenacaoListaNull() {
 		ArrayList<Estatistica> lista = new ArrayList<Estatistica>();
 		lista = RankingControl.ordenacao(lista);
-		assertTrue(lista.size() == 0 );
+		assertTrue(lista.size() == 0);
 	}
 
 }
