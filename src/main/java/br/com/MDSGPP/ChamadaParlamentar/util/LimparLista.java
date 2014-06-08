@@ -39,17 +39,38 @@ public final class LimparLista {
 		ArrayList<ArrayList<Estatistica>> passar = new ArrayList<ArrayList<Estatistica>>();
 		ArrayList<Estatistica> removidos = new ArrayList<Estatistica>();
 		for (int i = 0; i < lista.size(); i++) {
-			try {
-				Integer.parseInt(lista.get(i).getNumeroSessao());
-			} catch (NumberFormatException e) {
-				removidos.add(lista.get(i));
-				lista.remove(i);
-				i--;
-			}
-		}
+			i = anlyseOneItem(lista, passar, removidos, i);
 
+		}
 		passar.add(lista);
 		passar.add(removidos);
 		return passar;
+	}
+
+	/**
+	 * This method analyze to see if one item must go to removed or to the list.
+	 * 
+	 * @param lista
+	 *            it is the list with all the statistics.
+	 * @param passar
+	 *            it is the list of the ones that are ok.
+	 * @param removidos
+	 *            it is the list of the ones that has no data.
+	 * @param i
+	 *            it is the place where to search the statistic.
+	 * @return returns the i to control where it is.
+	 */
+	private static int anlyseOneItem(ArrayList<Estatistica> lista,
+			ArrayList<ArrayList<Estatistica>> passar,
+			ArrayList<Estatistica> removidos, int i) {
+		try {
+			Integer.parseInt(lista.get(i).getNumeroSessao());
+		} catch (NumberFormatException e) {
+			removidos.add(lista.get(i));
+			lista.remove(i);
+			i--;
+		}
+		return i;
+
 	}
 }
