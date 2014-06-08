@@ -25,31 +25,31 @@ import br.com.MDSGPP.ChamadaParlamentar.model.Ranking;
 
 public class RankingServ extends javax.servlet.http.HttpServlet {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * This is the only method of the servlet, it is going to call for an
-     * ranking and then it sends the ranking to the jsp page or it goes for an
-     * error page.
-     */
-    protected void service(HttpServletRequest request,
-	    HttpServletResponse response) throws ServletException, IOException {
-	Ranking ranking = null;
-	RequestDispatcher rd = null;
-	final String rankingPage = "/Ranking.jsp";
-	final String erro = "/Erro.jsp";
+	/**
+	 * This is the only method of the servlet, it is going to call for an
+	 * ranking and then it sends the ranking to the jsp page or it goes for an
+	 * error page.
+	 */
+	protected void service(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		Ranking ranking = null;
+		RequestDispatcher rd = null;
+		final String rankingPage = "/Ranking.jsp";
+		final String erro = "/Erro.jsp";
 
-	try {
-	    ranking = RankingControl.passarRankingTop5();
-	    request.setAttribute("ranking", ranking);
-	    rd = request.getRequestDispatcher(rankingPage);
+		try {
+			ranking = RankingControl.passarRankingTop5();
+			request.setAttribute("ranking", ranking);
+			rd = request.getRequestDispatcher(rankingPage);
 
-	} catch (ClassNotFoundException e) {
-	    rd = request.getRequestDispatcher(erro);
-	} catch (SQLException e) {
-	    rd = request.getRequestDispatcher(erro);
+		} catch (ClassNotFoundException e) {
+			rd = request.getRequestDispatcher(erro);
+		} catch (SQLException e) {
+			rd = request.getRequestDispatcher(erro);
+		}
+
+		rd.forward(request, response);
 	}
-
-	rd.forward(request, response);
-    }
 }
