@@ -60,30 +60,8 @@ public class ParlamentarRecebido extends javax.servlet.http.HttpServlet {
 				deputado = DeputadosControl.verificaExistencia(nome);
 
 				if (deputado != null) {
-					ArrayList<String> lista = DeputadosControl.getDeputados();
-					Estatistica estatistica = EstatisticaControl
-							.gerarEstatisticas(EstatisticaControl
-									.arrumarNomePesquisa(deputado));
-
-					int numeroSessoes = estatistica.getLista().size();
-					int noDePaginas = ((int) Math.ceil(numeroSessoes * 1.0
-							/ sessoesPorPagina)) - 1;
-
-					double presenca = Math
-							.ceil(((Double.parseDouble(estatistica
-									.getNumeroSessao())) / (Double
-									.parseDouble(estatistica.getTotalSessao()))) * 100);
-					String presencaPassar = Double.toString(presenca);
-
-					estatistica.setLista(EstatisticaControl.passarListaCerta(
-							pagina - 1, sessoesPorPagina,
-							estatistica.getLista()));
-
-					request.setAttribute("presenca", presencaPassar);
-					request.setAttribute("noDePaginas", noDePaginas);
-					request.setAttribute("paginaAtual", pagina);
-					request.setAttribute("lista", lista);
-					request.setAttribute("estatistica", estatistica);
+					request = this.generateDeputyStatistics(request, deputado,
+							sessoesPorPagina, pagina);
 					rd = request
 							.getRequestDispatcher("/MostrarEstatisticaDeputado.jsp");
 
@@ -108,4 +86,46 @@ public class ParlamentarRecebido extends javax.servlet.http.HttpServlet {
 
 		rd.forward(request, response);
 	}
+
+	private HttpServletRequest generateDeputyStatistics(
+			HttpServletRequest request, Deputados deputado,
+			int sessoesPorPagina, int pagina) throws ClassNotFoundException,
+			SQLException, ListaVaziaException {
+		ArrayList<String> lista = DeputadosControl.getDeputados();
+		Estatistica estatistica = EstatisticaControl
+				.gerarEstatisticas(EstatisticaControl
+						.arrumarNomePesquisa(deputado));
+
+		int numeroSessoes = estatistica.getLista().size();
+		request = this.generateNumberOfPages(request, numeroSessoes,
+				sessoesPorPagina, pagina);
+
+		double presenca = Math.ceil(((Double.parseDouble(estatistica
+				.getNumeroSessao())) / (Double.parseDouble(estatistica
+				.getTotalSessao()))) * 100);
+		String presencaPassar = Double.toString(presenca);
+
+		estatistica.setLista(EstatisticaControl.passarListaCerta(pagina - 1,
+				sessoesPorPagina, estatistica.getLista()));
+
+		request.setAttribute("presenca", presencaPassar);
+		request.setAttribute("lista", lista);
+		request.setAttribute("estatistica", estatistica);
+
+		return request;
+	}
+
+	private HttpServletRequest generateNumberOfPages(
+			HttpServletRequest request, int numeroSessoes,
+			int sessoesPorPagina, int pagina) {
+		int noDePaginas = ((int) Math.ceil(numeroSessoes * 1.0
+				/ sessoesPorPagina)) - 1;
+
+		request.setAttribute("noDePaginas", noDePaginas);
+		request.setAttribute("paginaAtual", pagina);
+
+		return request;
+
+	}
+
 }
